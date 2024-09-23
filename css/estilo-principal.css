@@ -1,0 +1,113 @@
+/*CSS externo*/
+
+/*Estilizado para el encabezado de la página (color de fondo, etc)*/
+header {
+    background-color: #8b4513;
+    /*Resetear las propiedades de posicion por defecto 
+    y extender el header hasta el final de la pagina
+    horizontalmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url("../img/Dried-Cranberry-Arroz-con-Pollo-Image.jpg");
+    background-size: cover;
+    /*cubrir todo el header*/
+    background-position: center;
+    /*posicionar la imagen en el centro*/
+    background-repeat: no-repeat;
+    /*no repetir la imagen*/
+    padding: 1px 20px;
+    display: flex;
+
+}
+
+/*Estilizado para todos los encabezados h1 de la página*/
+h1 {
+    font-family: sans-serif;
+}
+
+/*Estilizado para el logo de la página*/
+#logo {
+    /*Cambia posicionamiento del elemento en X y Y*/
+    transform: translate(-50px, 0px);
+    position: static;
+    /*mantener la posicion estatica */
+
+}
+
+/*Estilizado para la navegacion del menu inicio*/
+
+.navegacion {
+
+    list-style-type: none;
+    /*Quitar los bullets de los elementos de la lista*/
+    display: flex;
+    /*Arreglar los elementos de navegacion horizontalmente*/
+    gap: 30px;
+    /*Agregar un espaciado entre los elementos*/
+    color: white;
+    text-decoration-color: black;
+    font-weight: bold;
+    margin-left: 600px;
+
+}
+
+/* Tamaño de fuente responsivo para los links de la navegación */
+.navegacion a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5vw;
+    /* Tamaño de fuente relativo al viewport width */
+    font-weight: bold;
+}
+
+/* Suubrayar el texto cuando se le hace "hover" (acercar con mouse)
+  a los links del navbar*/
+.navegacion a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query para pantallas medianas */
+@media (max-width: 1024px) {
+    .navegacion a {
+        font-size: 2vw;
+        /* Slightly smaller font size for medium screens */
+        margin-right: 200px;
+        gap: 10px;
+        /*Agregar un espaciado entre los elementos*/
+        color: white;
+        text-decoration-color: black;
+        font-weight: bold;
+        display: flex;
+
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /*Agrupar el logo y el menú de navegación en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .navegacion {
+
+        flex-direction:row;
+        /* Agrupar los links verticalmente */
+        align-items:normal;
+        /*Alinear elementos en el centro */
+        margin-left: 0px;
+
+    }
+
+    .navegacion li {
+        margin-bottom: 10px;
+    }
+
+    .navegacion a {
+        font-size: 3.5vw;
+        /* Agrandar el tamaño de la fuente de los links para pantallas más pequeñas */
+    }
+}
