@@ -1,113 +1,146 @@
 /*CSS externo*/
 
+/* Estilizado general*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilizado del cuerpo*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /*Estilizado para el encabezado de la página (color de fondo, etc)*/
 header {
-    background-color: #8b4513;
+
+    display: flex;
+    position: fixed;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start; 
+
+
     /*Resetear las propiedades de posicion por defecto 
     y extender el header hasta el final de la pagina
     horizontalmente */
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+
+    /*Imagen de fondo */
     background: url("../img/Dried-Cranberry-Arroz-con-Pollo-Image.jpg");
-    background-size: cover;
+    background-color: black;
+
     /*cubrir todo el header*/
-    background-position: center;
+    background-size: cover;
     /*posicionar la imagen en el centro*/
-    background-repeat: no-repeat;
+    background-position: center;
     /*no repetir la imagen*/
+    background-repeat: no-repeat;
+
     padding: 1px 20px;
-    display: flex;
+
 
 }
 
 /*Estilizado para todos los encabezados h1 de la página*/
 h1 {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Estilizado para el logo de la página*/
 #logo {
     /*Cambia posicionamiento del elemento en X y Y*/
     transform: translate(-50px, 0px);
-    position: static;
+    /*No permitir que el logo se encoja*/
+    flex-shrink: 0;
     /*mantener la posicion estatica */
+    position:static;
 
+    margin-right: auto;
 }
 
-/*Estilizado para la navegacion del menu inicio*/
+/*Estilizado para los elementos del navbar (es una 
+lista desordenada) de la página*/
 
-.navegacion {
+nav ul {
 
-    list-style-type: none;
-    /*Quitar los bullets de los elementos de la lista*/
+    /*Quitar los 'bullets' de la lista*/
+    list-style: none;
+
+    /*Aplicar la propiedad flex*/
     display: flex;
-    /*Arreglar los elementos de navegacion horizontalmente*/
+
+    /*Dejar un espacio de 20 px entre cada elemento*/
     gap: 30px;
-    /*Agregar un espaciado entre los elementos*/
+
+    /*Aplicar el color al texto de los elementos*/
     color: white;
-    text-decoration-color: black;
+
+    /*Aplicar sombra al texto (color | offset-x | offset-y | 
+    radio de desenfoque */
+    text-shadow: black 1px 0 10px;
+
+    /*Aplicar negrita al texto*/
     font-weight: bold;
-    margin-left: 600px;
 
 }
 
-/* Tamaño de fuente responsivo para los links de la navegación */
-.navegacion a {
-    text-decoration: none;
-    color: white;
-    font-size: 2.5vw;
-    /* Tamaño de fuente relativo al viewport width */
-    font-weight: bold;
-}
+/*Estilizado para pantallas grandes */
 
-/* Suubrayar el texto cuando se le hace "hover" (acercar con mouse)
-  a los links del navbar*/
-.navegacion a:hover {
-    text-decoration: underline;
-}
+/*(Media query) Chequear que la pantalla del dispositivo 
+tenga un minimo de 768px (dispositivos de escritorio)*/
 
-/* Media Query para pantallas medianas */
-@media (max-width: 1024px) {
-    .navegacion a {
-        font-size: 2vw;
-        /* Slightly smaller font size for medium screens */
-        margin-right: 200px;
-        gap: 10px;
-        /*Agregar un espaciado entre los elementos*/
-        color: white;
-        text-decoration-color: black;
-        font-weight: bold;
-        display: flex;
-
-    }
-}
-
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     header {
+        justify-content: space-between;
+    }
+}
+
+/*Estilizado para pantallas pequeñas */
+
+/*(Media query) Chequear que la pantalla del dispositivo 
+tenga un máximo de 768px (dispositivos moviles)*/
+
+@media (max-width: 768px){
+    header {
+        /*Acomodar los elementos del header
+        en columna (verticalmente)*/
         flex-direction: column;
-        /*Agrupar el logo y el menú de navegación en pantallas pequeñas */
-        align-items: center;
+        /*Alinear los elementos
+        en el centro*/
+        align-items:center;
     }
 
-    .navegacion {
+    #logo{
 
+        /*Agregar márgenes para
+        centrar la imagen */
+        margin-right: 10px;
+        margin-left: 100px;
+    }
+
+    nav ul {
+        /*Acomodar los elementos del navbar 
+        de forma horizontal (row) */
         flex-direction:row;
-        /* Agrupar los links verticalmente */
-        align-items:normal;
-        /*Alinear elementos en el centro */
-        margin-left: 0px;
 
+        margin-right: 20px;
+        /*Agregar un margen de 10 px 
+        hacia arriba */
+        margin-top: 10px;
     }
+}
 
-    .navegacion li {
-        margin-bottom: 10px;
-    }
-
-    .navegacion a {
-        font-size: 3.5vw;
-        /* Agrandar el tamaño de la fuente de los links para pantallas más pequeñas */
-    }
+footer {
+    background-color: #8B4513;
+    display: flex;
+    position: fixed;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
