@@ -11,6 +11,12 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+#seccion1{
+    background-color: black;
+    top: 200 px;
 }
 
 /*Estilizado para el encabezado de la página (color de fondo, etc)*/
@@ -21,7 +27,6 @@ header {
     padding: 20px;
     justify-content: space-between;
     align-items: flex-start; 
-
 
     /*Resetear las propiedades de posicion por defecto 
     y extender el header hasta el final de la pagina
@@ -134,6 +139,48 @@ tenga un máximo de 768px (dispositivos moviles)*/
         margin-top: 10px;
     }
 }
+
+@media (max-width:720px){
+    header {
+        /*Acomodar los elementos del header
+        en columna (verticalmente)*/
+        flex-direction: column;
+        /*Alinear los elementos
+        en el centro*/
+        align-items:center;
+    }
+    
+    #logo{
+    
+        /*Agregar márgenes para
+        centrar la imagen */
+        margin-right: 10px;
+        margin-left: 100px;
+    }
+    
+    nav ul {
+        /*Acomodar los elementos del navbar 
+        de forma horizontal (row) */
+        flex-direction:row;
+    
+        margin-right: 20px;
+        /*Agregar un margen de 10 px 
+        hacia arriba */
+        margin-top: 10px;
+    }
+ }
+
+ .encabezadoTexto {
+    background-color: #c6a664; 
+    min-height: 300px; 
+    padding: 20px;
+ }
+
+ .contenidoPrincipal{
+    background-color: #f5f5dc; 
+    min-height: 600px; 
+    padding: 20px;
+ }
 
 footer {
     background-color: #8B4513;
