@@ -119,22 +119,14 @@ nav ul {
 
     /*Aplicar negrita al texto*/
     font-weight: bold;
-
-
 }
 
-/*Estilizado para pantallas grandes */
-
+nav ul li:hover{
+    background-color: rgb(67, 34, 34);
+    cursor: pointer;
+}
 /*(Media query) Chequear que la pantalla del dispositivo 
-tenga un minimo de 768px (dispositivos de escritorio)*/
-
-
-
-/*Estilizado para pantallas pequeñas */
-
-/*(Media query) Chequear que la pantalla del dispositivo 
-tenga un máximo de 768px (dispositivos moviles)*/
-
+tenga un máximo de 768px (pantallas más pequeñas)*/
 @media (max-width: 768px) {
     header {
         /*Acomodar los elementos del header
@@ -170,7 +162,7 @@ tenga un máximo de 768px (dispositivos moviles)*/
     .contenedorComida {
         /*Permitir que los contenedores ocupen el 100% del
         ancho en pantallas pequeñas*/
-        flex: ;
+        flex:auto;
     }
 
     .contenedorComida img {
@@ -178,6 +170,8 @@ tenga un máximo de 768px (dispositivos moviles)*/
     }
 }
 
+/*(Media query) Chequear que la pantalla del dispositivo 
+tenga un máximo de 768px (pantallas móviles)*/
 @media (max-width:720px) {
     header {
         /*Acomodar los elementos del header
@@ -247,8 +241,6 @@ tenga un máximo de 768px (dispositivos moviles)*/
     /*Permitir a los elementos moverse a una nueva linea en pantallas pequeñas */
     flex-wrap: wrap;
 
-
-
 }
 
 /*Estilizado de los contenedores de comida*/
@@ -265,8 +257,10 @@ tenga un máximo de 768px (dispositivos moviles)*/
     /*Alinear el texto en el centro*/
     text-align: center;
 
+    /*Aplicar radio de 10% al borde del contenedor de comida*/
     border-radius: 10%;
 
+    /*Aplicar animacion de fade in al contenedor de comida*/
     animation: animacionFadeIn ease 3s;
 }
 
@@ -276,21 +270,30 @@ tenga un máximo de 768px (dispositivos moviles)*/
     /*Eliminar el espacio debajo de las imágenes */
     display: block;
 
-    /*Centar la imagen dentro del contenedor */
+    /*Centrar la imagen dentro del contenedor */
     margin: 0 auto;
 
+    /*Aplicar ancho y alto a las imágenes en contenedorComida*/
     width: 100%;
     height: 50%;
 
     /*Esquinas redondeadas al 100%*/
     border-radius: 30%;
 
-
     /*Para evitar que las imágenes se distorsionen */
     object-fit: cover;
 
+    /*Animación para aplicar en la imagen*/
+    transition: transform ease-in 0.10s; 
 
 }
+
+/*Aplicar la animación por medio del hover*/
+.contenedorComida img:hover{
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
 
 footer {
     background-color: #8B4513;
