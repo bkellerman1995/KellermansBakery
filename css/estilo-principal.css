@@ -59,7 +59,6 @@ header {
     /*hacer el header responsivo */
     flex-wrap: wrap;
 
-
 }
 
 
@@ -71,12 +70,16 @@ header {
 h4 {
     /*Aplicar sombra al texto (color | offset-x | offset-y | 
     radio de desenfoque */
-    text-shadow: black 1px 0 10px;
 
     /*Aplicar negrita al texto*/
     font-weight: bold;
 
 }
+
+h4:hover{
+    text-shadow: black 1px 0 10px;
+}
+
 
 /*Estilizado para el logo de la página*/
 #logo {
@@ -119,6 +122,7 @@ nav ul {
     font-weight: bold;
 }
 
+
 nav ul li:hover {
     background-color: rgb(67, 34, 34);
     cursor: pointer;
@@ -127,7 +131,13 @@ nav ul li:hover {
 nav ul li a {
     /*Aplicar el color al texto de los elementos*/
     color: #fff;
-    text-decoration:solid;
+    text-decoration: solid;
+}
+
+.linksComidas {
+    /*Aplicar el color al texto de los elementos*/
+    color: #1a1919;
+    text-decoration: solid;
 }
 
 /*(Media query) Chequear que la pantalla del dispositivo 
@@ -149,7 +159,6 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
         centrar la imagen */
         margin-right: 50%;
         margin-left: 40%;
-        ;
     }
 
     nav ul {
@@ -163,16 +172,11 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
         hacia arriba */
         margin-top: 10px;
     }
-
 }
 
 /*(Media query) Chequear que la pantalla del dispositivo 
 tenga un máximo de 768px (pantallas móviles)*/
 @media (max-width:720px) {
-    header {
-        /*Acomodar los elementos del header
-        en columna (verticalmente)*/
-    }
 
     #logo {
 
@@ -190,7 +194,7 @@ tenga un máximo de 768px (pantallas móviles)*/
         font-size: smaller;
         margin-right: 20px;
         /*Agregar un margen de 10 px 
-        hacia arriba */
+        arriba */
         margin-top: 10px;
     }
 
@@ -222,7 +226,6 @@ tenga un máximo de 768px (pantallas móviles)*/
 .contenedorPrincipal {
     background-color: #f5f5dc;
     min-height: 600px;
-    padding: 20px;
 
     /*Alinear los 3 contenedores en linea*/
     display: flex;
@@ -234,13 +237,14 @@ tenga un máximo de 768px (pantallas móviles)*/
 }
 
 /*Aplicar la animación por medio del hover*/
-.contenedorComida img:hover {
+.contenedorComida img:hover, #logo:hover {
     transform: scale(1.25);
     cursor: pointer;
+    transition: transform ease-in 0.25s;
 }
 
 .seccionBocadillos {
-    animation: animacionFadeIn ease 3s;
+    animation: animacionFadeIn ease 2s;
 }
 
 h2 {
@@ -250,10 +254,11 @@ h2 {
 
 footer {
     background-color: #8B4513;
-    display: flex;
+    display:block;
     padding: 10px;
     bottom: 0;
     left: 0;
     width: 100%;
     color: white;
+    position:static;
 }

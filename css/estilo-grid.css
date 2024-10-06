@@ -6,14 +6,16 @@
 
 }
 
-.contenedor-bocadillos, .contenedor-platillos {
+.contenedor-bocadillos,
+.contenedor-platillos {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
-.bocadillo img, .platillo img {
+.bocadillo img,
+.platillo img {
     width: 90%;
     height: 50%;
     background-size: cover;
@@ -21,13 +23,15 @@
     transition: transform ease-in 0.10s;
 }
 
-.bocadillo img:hover, .platillo img:hover{
+.bocadillo img:hover,
+.platillo img:hover {
     transform: scale(1.25);
     cursor: pointer;
 }
 
 
-.bocadillo, .platillo {
+.bocadillo,
+.platillo {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     padding: 1rem;
@@ -37,3 +41,32 @@
     text-align: center;
 }
 
+@media (max-width:480px) {
+
+    #logo {
+
+        /*Agregar márgenes para
+        centrar la imagen */
+        margin-right: 10px;
+        margin-left: 100px;
+    }
+
+    nav ul {
+        /*Acomodar los elementos del navbar 
+        de forma horizontal (row) */
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: smaller;
+        margin-right: 20px;
+        /*Agregar un margen de 10 px 
+        arriba */
+        margin-top: 10px;
+    }
+
+    .contenedor-bocadillos,
+    .contenedor-platillos {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1em;
+    }
+}

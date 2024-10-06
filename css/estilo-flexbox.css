@@ -5,7 +5,7 @@
     border-radius: 5px;
     text-align: center;
     /*Aplicar animacion de fade in al contenedor de comida*/
-    animation: animacionFadeIn ease 3s;
+    animation: animacionFadeIn ease 2s;
 }
 
 /*Estilizado de las imagenes de comida*/
@@ -21,4 +21,31 @@
     /*Animación para aplicar en la imagen*/
     transition: transform ease-in 0.10s;
 
+
+}
+
+@media (max-width:480px) {
+
+    #logo {
+
+        /*Agregar márgenes para
+        centrar la imagen */
+        margin-right: 10px;
+        margin-left: 100px;
+    }
+
+    nav ul {
+        /*Acomodar los elementos del navbar 
+        de forma horizontal (row) */
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: smaller;
+        margin-right: 20px;
+        /*Agregar un margen de 10 px 
+        arriba */
+        margin-top: 10px;
+    }
+    .contenedorComida{
+        flex: calc(100vw /1);
+    }
 }
