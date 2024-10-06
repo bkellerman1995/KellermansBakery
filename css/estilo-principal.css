@@ -7,6 +7,10 @@
 }
 */
 
+/*Animaciones por medio de keyframes */
+
+/*Animación para mostrar un barrido en dirección
+vertical del content/main de la página web */
 @keyframes animacionFadeIn {
     0% {
         transform: translateY(100%);
@@ -33,8 +37,8 @@ body {}
 header {
 
     display: flex;
-    /*Nunca se mueve el header cuando se hace scroll*/
 
+    background: url("..//img/principal/Dried-Cranberry-Arroz-con-Pollo-Image.jpg");
     padding: 20px;
     justify-content: space-between;
     align-items: flex-start;
@@ -46,9 +50,6 @@ header {
     left: 0;
     width: 100%;
 
-    /*Imagen de fondo */
-    background: url("../img/Dried-Cranberry-Arroz-con-Pollo-Image.jpg");
-
     /*cubrir todo el header*/
     background-size: cover;
     /*posicionar la imagen en el centro*/
@@ -58,10 +59,9 @@ header {
 
     flex-wrap: wrap;
 
-    /* Transición suave al mostrar/ocultar */
-    transition: transform 0.3s ease-in-out;
 
 }
+
 
 /* Clase que oculta el header moviéndolo hacia arriba */
 .oculto {
@@ -99,6 +99,7 @@ nav {
     padding-bottom: -0.5%;
 
 }
+
 nav ul {
 
     /*Quitar los 'bullets' de la lista*/
@@ -121,10 +122,11 @@ nav ul {
     font-weight: bold;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     background-color: rgb(67, 34, 34);
     cursor: pointer;
 }
+
 /*(Media query) Chequear que la pantalla del dispositivo 
 tenga un máximo de 768px (pantallas más pequeñas)*/
 @media (max-width: 768px) {
@@ -159,15 +161,6 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
         margin-top: 10px;
     }
 
-    .contenedorComida {
-        /*Permitir que los contenedores ocupen el 100% del
-        ancho en pantallas pequeñas*/
-        flex:auto;
-    }
-
-    .contenedorComida img {
-        width: 400%;
-    }
 }
 
 /*(Media query) Chequear que la pantalla del dispositivo 
@@ -196,12 +189,6 @@ tenga un máximo de 768px (pantallas móviles)*/
         /*Agregar un margen de 10 px 
         hacia arriba */
         margin-top: 10px;
-    }
-
-    #contenedorComida3 {
-
-        width: 45%;
-        height: 75%;
     }
 
 }
@@ -236,63 +223,21 @@ tenga un máximo de 768px (pantallas móviles)*/
 
     /*Alinear los 3 contenedores en linea*/
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     /*Permitir a los elementos moverse a una nueva linea en pantallas pequeñas */
     flex-wrap: wrap;
 
 }
 
-/*Estilizado de los contenedores de comida*/
-.contenedorComida {
-    /*Cada contenedor ocupa el 30% del ancho del contenedor principal*/
-    flex: 1 1 30%;
 
-    /*Aplicar padding de 20 px*/
-    padding: 20px;
-
-    /*Aplicar margen de 10px */
-    margin: 10px;
-
-    /*Alinear el texto en el centro*/
-    text-align: center;
-
-    /*Aplicar radio de 10% al borde del contenedor de comida*/
-    border-radius: 10%;
-
-    /*Aplicar animacion de fade in al contenedor de comida*/
-    animation: animacionFadeIn ease 3s;
-}
-
-/*Estilizado de las imagenes de comida*/
-.contenedorComida img {
-
-    /*Eliminar el espacio debajo de las imágenes */
-    display: block;
-
-    /*Centrar la imagen dentro del contenedor */
-    margin: 0 auto;
-
-    /*Aplicar ancho y alto a las imágenes en contenedorComida*/
-    width: 100%;
-    height: 50%;
-
-    /*Esquinas redondeadas al 100%*/
-    border-radius: 30%;
-
-    /*Para evitar que las imágenes se distorsionen */
-    object-fit: cover;
-
-    /*Animación para aplicar en la imagen*/
-    transition: transform ease-in 0.10s; 
-
-}
 
 /*Aplicar la animación por medio del hover*/
-.contenedorComida img:hover{
+.contenedorComida img:hover {
     transform: scale(1.25);
     cursor: pointer;
 }
+
 
 
 footer {

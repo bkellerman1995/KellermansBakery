@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
     <!--Soporte de carácteres especiales-->
@@ -11,10 +11,9 @@
     <!--Adaptar la página a dispositivos móviles-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Referencia archivoa externos css-->
-    <link href="/css/estilo-principal.css" rel="stylesheet">
-    <link href="/css/estilo-flexbox.css" rel="stylesheet">
-
+    <!--Referencia archivos extenos css-->
+    <link href="../css/estilo-principal.css" rel="stylesheet">
+    <link href="../css/estilo-grid.css" rel="stylesheet">
     <!--Referencia bootstrap local-->
     <!--<link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">-->
 
@@ -32,15 +31,12 @@
 
 </head>
 
-<!--Cuerpo de la página-->
-
 <body>
 
     <!--Encabezado de la página-->
     <header>
         <!--Logo-->
-        <img id="logo" src="./img/logo.png" width="225" />
-
+        <img id="logo" src="../img/logo.png" width="225" />
 
         <!--navBar-->
         <nav>
@@ -55,42 +51,40 @@
         </nav>
     </header>
 
-    <!--Contenedor del encabezado de texto (banner)-->
-    <div class="encabezadoTexto">
-        <p>ofrecemos varias opciones a escoger</p>
-    </div>
+    <!--Contenido principal de la página (imágenes de platillos)-->
 
-    <!--Contenedor Principal-->
-    <div class="contenedorPrincipal">
+    <main class="contenido">
 
-        <!--Contenedor tipoComida1-->
-        <div class="contenedorComida">
-            <!--Titulo tipo Comida-->
-            <h4> Bocadillos</h4>
-            <p>test</p>
-            <img src="./img/principal/pati.jpeg">
+        <!-- Sección libros-->
+        <section class="seccionPlatillos">
+            <h2>Bocadillos varios a escoger</h2>
 
-        </div>
+            <!--Contenedor de los platillo-->
+            <div class="contenedor-platillos">
 
-        <!--Contenedor tipoComida2-->
-        <div class="contenedorComida">
-            <!--Titulo tipo Comida-->
-            <h4> Platillos</h4>
-            <p>test</p>
-            <img src="./img/principal/riceAndBeans.jpeg">
-        </div>
+                <!--Estructura de contenedor para cada platillo-->
+                <div class="bocadillo">
+                    <img src="../img/mnuPlatillos/riceAndBeans.jpeg" alt="riceAndBeans" />
+                    <h3>Bocadillo</h3>
+                    <p><b></b>Bocadillo 1</p>
+                    <!--Simbolo de colones en html: &#8353-->
+                    <p><b><i>Precio: </i></b>&#8353 1000</p>
+                </div>
 
-        <!--Contenedor tipoComida3-->
-        <div class="contenedorComida">
-            <!--Titulo tipo Comida-->
-            <h4> Postres </h4>
-            <p>test</p>
-            <img src="./img/principal/tartaleta.jpeg">
-        </div>
-    </div>
+
+
+            </div>
+
+        </section>
+    </main>
+
     <footer>
         © 2024, Caribbean Culinary Delights. Todos los derechos reservados.
     </footer>
+    <!-- <script src="./js/scripts.js"></script> -->
+
 </body>
+
+
 
 </html>
