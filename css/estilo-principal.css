@@ -1,11 +1,10 @@
 /*CSS externo*/
 
-/*@font-face {
+/* @font-face {
     font-family: FuenteDeWeb;
     src: url("../fonts/Crispy\ Food\ DEMO.ttf");
-    font-size:larger;
-}
-*/
+} */
+
 
 /*Animaciones por medio de keyframes */
 
@@ -26,7 +25,7 @@ vertical del content/main de la página web */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: FuentedeWeb, Arial, Helvetica, sans-serif;
 }
 
 /*Estilizado del cuerpo*/
@@ -57,6 +56,7 @@ header {
     /*no repetir la imagen*/
     background-repeat: no-repeat;
 
+    /*hacer el header responsivo */
     flex-wrap: wrap;
 
 
@@ -111,9 +111,6 @@ nav ul {
     /*Dejar un espacio de 20 px entre cada elemento*/
     gap: 30px;
 
-    /*Aplicar el color al texto de los elementos*/
-    color: #fff;
-
     /*Aplicar sombra al texto (color | offset-x | offset-y | 
     radio de desenfoque */
     text-shadow: black 1px 0 10px;
@@ -125,6 +122,12 @@ nav ul {
 nav ul li:hover {
     background-color: rgb(67, 34, 34);
     cursor: pointer;
+}
+
+nav ul li a {
+    /*Aplicar el color al texto de los elementos*/
+    color: #fff;
+    text-decoration:solid;
 }
 
 /*(Media query) Chequear que la pantalla del dispositivo 
@@ -230,14 +233,19 @@ tenga un máximo de 768px (pantallas móviles)*/
 
 }
 
-
-
 /*Aplicar la animación por medio del hover*/
 .contenedorComida img:hover {
     transform: scale(1.25);
     cursor: pointer;
 }
 
+.seccionBocadillos {
+    animation: animacionFadeIn ease 3s;
+}
+
+h2 {
+    text-align: center;
+}
 
 
 footer {
