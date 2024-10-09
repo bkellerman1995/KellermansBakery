@@ -20,9 +20,23 @@
 
     /*Animación para aplicar en la imagen*/
     transition: transform ease-in 0.10s;
+}
 
+/*Estilizado del aside junto con los articulos*/
+.contenedorBlog {
+    display: flex;
+    justify-content: flex-start;
+
+    /*para que el aside abarque el mismo alto 
+    que los contenedores a su derecha*/
+    align-items: stretch;
+
+    /*Hacer que el contenedor (contenedorBlog) abarque el alto 
+    de la pantalla*/
+    min-height: 100vh;
 
 }
+
 
 @media (max-width:480px) {
 
@@ -45,7 +59,43 @@
         arriba */
         margin-top: 10px;
     }
-    .contenedorComida{
+
+    .contenedorComida {
         flex: calc(100vw /1);
+    }
+
+    aside {
+        position: fixed; /* El menú estará fijo en el lateral */
+        left: -100%; /* Oculto fuera de la vista por defecto */
+        top: 0;
+        height: 100%; /* Ocupa todo el alto de la pantalla */
+        width: 40%; /* Ancho del menú tipo hamburguesa */
+        background-color: #a0522d;
+        transition: left 0.3s ease; /* Transición suave al abrir/cerrar */
+
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        background-color: #a0522d;
+        color: white;
+        font-size: 30px;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    aside.open {
+        left:0; /*Mostrar el menú aside */
+    }
+
+    .boton-cerrar {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 10px;
     }
 }

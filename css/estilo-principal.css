@@ -25,7 +25,7 @@ vertical del content/main de la página web */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: FuentedeWeb, Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /*Estilizado del cuerpo*/
@@ -68,15 +68,13 @@ header {
 }
 
 h4 {
-    /*Aplicar sombra al texto (color | offset-x | offset-y | 
-    radio de desenfoque */
 
     /*Aplicar negrita al texto*/
     font-weight: bold;
 
 }
 
-h4:hover{
+h4:hover {
     text-shadow: black 1px 0 10px;
 }
 
@@ -134,10 +132,15 @@ nav ul li a {
     text-decoration: solid;
 }
 
+/*Estilizado para los links de las comidas (menú principal)*/
 .linksComidas {
     /*Aplicar el color al texto de los elementos*/
     color: #1a1919;
     text-decoration: solid;
+}
+
+.menu-hamburguesa,.boton-cerrar{
+    display: none;
 }
 
 /*(Media query) Chequear que la pantalla del dispositivo 
@@ -198,6 +201,15 @@ tenga un máximo de 768px (pantallas móviles)*/
         margin-top: 10px;
     }
 
+    aside p {
+
+        color: #fff;
+        text-decoration: solid;
+        /*Aplicar negrita al texto*/
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size:xx-small;
+    }
 }
 
 /*Estilizado del texto del encabezado*/
@@ -220,6 +232,9 @@ tenga un máximo de 768px (pantallas móviles)*/
     /*Aplicar negrita al texto*/
     font-weight: bold;
 
+    /*Aplicar el estilo cursiva al texto*/
+    font-style: italic;
+
 }
 
 /*Estilizado del contenido principal*/
@@ -237,7 +252,8 @@ tenga un máximo de 768px (pantallas móviles)*/
 }
 
 /*Aplicar la animación por medio del hover*/
-.contenedorComida img:hover, #logo:hover {
+.contenedorComida img:hover,
+#logo:hover {
     transform: scale(1.25);
     cursor: pointer;
     transition: transform ease-in 0.25s;
@@ -251,14 +267,35 @@ h2 {
     text-align: center;
 }
 
+/*Estilizado de la etiqueta aside (página blog)*/
+aside {
+    
+    width: 5%;
+    background-color: #8B4513;
+    padding-right: 10%;
+    padding-left: 2%;
+    border-right: 1px solid #ccc;
+    text-align: center;
+
+}
+
+aside p {
+
+    color: #fff;
+    text-decoration: solid;
+    /*Aplicar negrita al texto*/
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: smaller;
+}
 
 footer {
     background-color: #8B4513;
-    display:block;
+    display: block;
     padding: 10px;
     bottom: 0;
     left: 0;
     width: 100%;
     color: white;
-    position:static;
+    position: static;
 }
