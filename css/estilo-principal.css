@@ -299,3 +299,9 @@ footer {
     color: white;
     position: static;
 }
+
+/*Estilizado del contenedorRedesSociales */
+.contenedorRedesSociales{
+    text-align: center;
+    text-transform: uppercase;
+}

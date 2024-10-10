@@ -28,6 +28,21 @@
     margin-left: 15%;
 }
 
+.contenedorRedesSociales  {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    /* gap: 5rem;
+    margin-left: 15%; */
+    height: 100%;
+    
+}
+
+.contenedorFacebook {
+    height: 100%;
+}
+
+
 .bocadillo img,
 .platillo img {
     width: 90%;
@@ -43,6 +58,12 @@
     background-size: cover;
     border-radius: 10%;
     transition: transform ease-in 0.10s;
+}
+
+.contenedorFacebook img {
+    width: auto;
+    height: 5%;
+    background-size: cover;
 }
 
 .bocadillo img:hover,
@@ -72,7 +93,7 @@
     text-align: center;
 }
 
-@media (max-width:480px) {
+@media (max-width:480px){
 
     #logo {
 
@@ -102,3 +123,4 @@
         padding: 1em;
     }
 }
+
