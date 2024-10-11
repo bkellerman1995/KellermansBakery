@@ -80,16 +80,17 @@ h4:hover {
 
 
 /*Estilizado para el logo de la página*/
-#logo {
-    /*Cambia posicionamiento del elemento en X y Y*/
+.contenedor img {
+
     transform: translate(-50px, 0px);
-    /*No permitir que el logo se encoja*/
+    /*No permitir que el logo se encoja */
     flex-shrink: 0;
     /*mantener la posicion estatica */
     position: static;
 
     margin-right: auto;
 }
+
 
 /*Estilizado para los elementos del navbar (es una 
 lista desordenada) de la página*/
@@ -123,7 +124,6 @@ nav ul {
 
 nav ul li:hover {
     background-color: rgb(67, 34, 34);
-    cursor: pointer;
 }
 
 nav ul li a {
@@ -139,7 +139,8 @@ nav ul li a {
     text-decoration: solid;
 }
 
-.menu-hamburguesa,.boton-cerrar{
+.menu-hamburguesa,
+.boton-cerrar {
     display: none;
 }
 
@@ -156,12 +157,19 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
         flex-wrap: wrap;
     }
 
-    #logo {
 
-        /*Agregar márgenes para
-        centrar la imagen */
-        margin-right: 50%;
-        margin-left: 40%;
+    .contenedorLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        /* Ensures horizontal centering */
+    }
+
+    .contenedorLogo img {
+        max-width: 150px;
+        /* Smaller logo size for mobile */
+        height: auto;
     }
 
     nav ul {
@@ -181,12 +189,18 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
 tenga un máximo de 768px (pantallas móviles)*/
 @media (max-width:720px) {
 
-    #logo {
+    .contenedorLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        /* Ensures horizontal centering */
+    }
 
-        /*Agregar márgenes para
-        centrar la imagen */
-        margin-right: 10px;
-        margin-left: 100px;
+    .contenedorLogo img {
+        max-width: 150px;
+        /* Smaller logo size for mobile */
+        height: auto;
     }
 
     nav ul {
@@ -208,7 +222,7 @@ tenga un máximo de 768px (pantallas móviles)*/
         /*Aplicar negrita al texto*/
         font-weight: bold;
         text-transform: uppercase;
-        font-size:xx-small;
+        font-size: xx-small;
     }
 }
 
@@ -253,7 +267,8 @@ tenga un máximo de 768px (pantallas móviles)*/
 
 /*Aplicar la animación por medio del hover*/
 .contenedorComida img:hover,
-#logo:hover {
+.contenedorLogo img:hover,
+nav ul li:hover {
     transform: scale(1.25);
     cursor: pointer;
     transition: transform ease-in 0.25s;
@@ -269,7 +284,7 @@ h2 {
 
 /*Estilizado de la etiqueta aside (página blog)*/
 aside {
-    
+
     width: 5%;
     background-color: #8B4513;
     padding-right: 10%;

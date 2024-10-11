@@ -33,7 +33,7 @@
 .contenedorRedesSociales  {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto; /* Automatically adjust to fit content */
+    grid-template-rows: auto auto;
     align-items: center;
     justify-items: center;
     gap: 10px;
@@ -52,14 +52,6 @@
 .platillo img {
     width: 90%;
     height: 50%;
-    background-size: cover;
-    border-radius: 10%;
-    transition: transform ease-in 0.10s;
-}
-
-.articulo img {
-    width: 100%;
-    height: 80%;
     background-size: cover;
     border-radius: 10%;
     transition: transform ease-in 0.10s;
@@ -87,27 +79,42 @@
     border-radius: 10%;
     text-align: center;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .articulo {
 
+    flex: 1;
     padding: 2rem;
     border-radius: 10%;
     text-align: center;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.articulo img {
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    border-radius: 10%;
+    transition: transform ease-in 0.10s;
 }
 
 @media (max-width:480px){
 
-    #logo {
-
-        /*Agregar márgenes para
-        centrar la imagen */
-        margin-right: 10px;
-        margin-left: 100px;
+    .contenedorLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Ensures horizontal centering */
     }
+    
+    .contenedorLogo img {
+        max-width: 150px; /* Smaller logo size for mobile */
+        height: auto;
+    }
+
 
     nav ul {
         /*Acomodar los elementos del navbar 

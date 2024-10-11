@@ -40,12 +40,17 @@
 
 @media (max-width:480px) or (max-width:1100px) {
 
-    #logo {
 
-        /*Agregar márgenes para
-        centrar la imagen */
-        margin-right: 10px;
-        margin-left: 100px;
+    .contenedorLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Ensures horizontal centering */
+    }
+    
+    .contenedorLogo img {
+        max-width: 150px; /* Smaller logo size for mobile */
+        height: auto;
     }
 
     nav ul {
