@@ -58,6 +58,6 @@ document.querySelectorAll('.btnCerrar').forEach(button => {
 
 // Cerrar el popup cuando se de click fuera de él (en el overlay)
 overlay.addEventListener('click', function () {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
+    closePopup(popup1);
+    closePopup(popup2);
 });

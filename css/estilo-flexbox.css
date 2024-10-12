@@ -23,10 +23,9 @@
 }
 
 /*Estilizado del aside junto con los articulos*/
-.contenedorBlog {
+.contenedorBlog, .contenedorArt1 {
     display: flex;
     justify-content: flex-start;
-
     /*para que el aside abarque el mismo alto 
     que los contenedores a su derecha*/
     align-items: stretch;
@@ -37,6 +36,30 @@
 
 }
 
+.contenedorArt1 article{
+    padding-left: 2%;
+}
+
+.contenedorArt1 article h1,h2 {
+    text-align: center;
+}
+
+.contenedorArt1 p, .contenedorBlog aside p {
+    padding-right:2%;
+    box-shadow: 10px 5px 5px brown;
+}
+
+.contenedorArt1 p img {
+    width: 25%;
+    margin-right: 50%;
+    border-radius: 10%;
+}
+
+.contenedorArt1 img {
+    width: 25%;
+    margin-left: 35%;
+    border-radius: 10%;
+}
 
 @media (max-width:480px) or (max-width:1100px) {
 

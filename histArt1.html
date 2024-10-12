@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--Soporte de carácteres especiales-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Web">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Bryan Kellerman">
+
+    <!--Adaptar la página a dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Referencia archivoa externos css-->
+    <link href="/css/estilo-principal.css" rel="stylesheet">
+    <link href="/css/estilo-flexbox.css" rel="stylesheet">
+    <link href="/css/estilo-grid.css" rel="stylesheet">
+
+    <!--Referencia bootstrap local-->
+    <!--<link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">-->
+
+    <!--CSS de Bootstrap por CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--JS de Bootstrap por CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!--Titulo a mostrar en la pestaña del navegador-->
+    <title>Kellerman's Bakery</title>
+
+</head>
+
+<body>
+
+    <!--Encabezado de la página-->
+    <header>
+
+        <!--Logo-->
+
+        <div class="contenedorLogo">
+            <a href="/index.html">
+                <img src="./img/logo.png" width="225" />
+            </a>
+        </div>
+
+
+
+        <!--navBar-->
+        <nav>
+            <ul> <!--Para estilizar el nav (elementos)-->
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#">MENÚ</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#">ACERCA DE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Contenedor del encabezado de texto (banner)-->
+    <div class="encabezadoTexto">
+        <p>tenemos </p>
+    </div>
+
+    <!--Main-->
+    <main class="contenidoBlog">
+        <div class="contenedorArt1">
+            <button id="btnCerrar" class="boton-cerrar">✖</button>
+
+            <!--Aside-->
+            <aside id="menuAside">
+
+                <br><br>
+                <a class="linksAside" target="_blank" href="https://cookpad.com/cr/buscar/comida%20caribena">
+                    <p>Recetas</p>
+                </a>
+                <br><br>
+                <a class="linksAside" target="_blank"
+                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
+                    <p>Turismo</p>
+                </a>
+                <br><br>
+                <a class="linksAside" target="_blank"
+                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
+                    <p>Boletines semanales</p>
+                </a>
+                <br><br>
+                <a class="linksAside" target="_blank"
+                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
+                    <p>Subscripción </p>
+                </a>
+
+            </aside>
+
+            <button id="hamburguesa" class="menu-hamburguesa">☰</button>
+
+            <!--SeccionArticulo-->
+            <article>
+
+                <h1>La Historia de la Construcción del Tren al Atlántico en Costa Rica</h1>
+
+                <p>El tren al Atlántico en Costa Rica es una de las obras de infraestructura más importantes y
+                    emblemáticas del país. Esta línea ferroviaria, que conecta el Valle Central con la costa del Caribe,
+                    no solo transformó la economía costarricense, sino que también jugó un papel clave en la integración
+                    del territorio y la modernización del país. A continuación, exploramos su historia, los desafíos en
+                    su construcción y su legado.
+
+                    <br><br>
+                </p>
+
+                <h2>1. Origen y necesidad de la construcción</h2>
+                <p>En la segunda mitad del siglo XIX, Costa Rica experimentaba un crecimiento en la producción de café,
+                    su principal producto de exportación. Sin embargo, la falta de una infraestructura adecuada para el
+                    transporte de mercancías dificultaba el acceso a los mercados internacionales. La construcción de un
+                    ferrocarril hacia la costa atlántica se veía como una solución necesaria para conectar el Valle
+                    Central con el puerto de Limón.
+
+                    <br><br>
+                    <img src="/img/blog/trenAtlanticoArt.jpg" alt="Pimienta Jamaica" />
+                    <br><br>
+                </p>
+
+                <h2>2. El inicio del proyecto y los primeros desafíos</h2>
+                <p>La construcción del ferrocarril comenzó en 1871 bajo la administración del presidente Tomás Guardia.
+                    El proyecto fue dirigido por el ingeniero estadounidense Minor Keith, quien enfrentó múltiples
+                    dificultades, incluyendo terrenos montañosos, selvas densas, enfermedades tropicales, y la falta de
+                    mano de obra capacitada. Miles de trabajadores, principalmente inmigrantes jamaiquinos y chinos,
+                    participaron en la obra, enfrentando condiciones muy adversas.
+
+                    <br><br>
+                    <img src="/img/blog/Minor_Keith.jpg" alt="Pimienta Jamaica" />
+                    <br><br>
+                </p>
+
+                <h2>3. El papel de Minor Keith en la construcción</h2>
+                <p>Minor Keith fue fundamental en la construcción del ferrocarril. Tras la muerte de su hermano y otros
+                    ingenieros que habían trabajado en el proyecto, Keith asumió la responsabilidad total de la obra.
+                    Debido a los altos costos y la falta de financiamiento, negoció un acuerdo con el gobierno
+                    costarricense que le permitió recibir vastas tierras en concesión, así como el control del
+                    ferrocarril una vez terminado.
+
+                    <br><br>
+                    <img src="/img/blog/Minor_KeithyCompannia.jpg" alt="Pimienta Jamaica" />
+                    <br><br>
+                </p>
+
+                <h2>4. Las dificultades y los costos humanos</h2>
+                <p>Las enfermedades como la malaria y la fiebre amarilla cobraron la vida de miles de trabajadores. La
+                    selva costarricense y el clima tropical fueron obstáculos constantes, lo que resultó en numerosos
+                    retrasos y un alto costo humano. Sin embargo, la perseverancia de los trabajadores y la
+                    determinación de Keith permitieron que el proyecto avanzara, aunque fuera a un ritmo lento y con
+                    constantes dificultades financieras.
+
+                    <br><br>
+                    <img src="/img/blog/lineaFerreaTrenAtl.png" alt="Pimienta Jamaica" />
+                    <br><br>
+                </p>
+
+                <h2>5. La finalización y el impacto en la economía</h2>
+                <p>El ferrocarril fue finalmente completado en 1890, después de casi 20 años de arduo trabajo. La
+                    apertura de la línea ferroviaria al Atlántico transformó la economía de Costa Rica al facilitar la
+                    exportación de productos como el café y el banano. Además, la obra abrió la región del Caribe al
+                    desarrollo económico, generando nuevas oportunidades y fomentando la inmigración y el comercio.
+
+                    <br><br>
+                    <img src="/img/blog/trenAtlanticoBananos.jpg" alt="Pimienta Jamaica" />
+                    <br><br>
+                </p>
+
+                <h2>6. El legado del tren al Atlántico</h2>
+                <p>El tren al Atlántico sigue siendo un símbolo del progreso y la determinación de Costa Rica. Aunque
+                    con el tiempo el transporte ferroviario perdió relevancia frente a las carreteras, la historia de su
+                    construcción y los sacrificios hechos siguen siendo recordados como un hito en la historia del país.
+                    Actualmente, existen esfuerzos para restaurar y revitalizar partes del ferrocarril como un
+                    patrimonio cultural e histórico.
+
+                    <br><br>
+                    <img src="/img/blog/trenAtlanticoActualidad.jpg" alt="Pimienta Jamaica" />
+                    <br><br>
+                </p>
+
+            </article>
+
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="contenedorRedesSociales">
+            <p>Nuestras redes sociales</p>
+
+            <!--Contenedor de Facebook-->
+            <div class="contenedorFacebook">
+                <a class=linkFacebook target="_blank" href="https://www.facebook.com/profile.php?id=100083469393808">
+                    <img src="img/principal/fbLogo.png" />
+                </a>
+            </div>
+
+        </div>
+
+        © 2024, Caribbean Culinary Delights. Todos los derechos reservados.
+    </footer>
+
+    <script src="js/scripts.js"> type = "text/javascript"</script>
+</body>
+
+</html>
