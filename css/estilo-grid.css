@@ -20,12 +20,12 @@
     gap: 1rem;
 }
 
-.contenedor-articulos {
+.contenedor-articulos
+ {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
-    margin-left: 15%;
 }
 
 /*Estilizado del contenedorRedesSociales */
@@ -67,9 +67,20 @@
 .bocadillo img:hover,
 .platillo img:hover {
     transform: scale(1.25);
-    cursor: pointer;
+    cursor: pointer;;
 }
 
+.articuloPopUp {
+    padding: 5%;
+    background-color: rgb(167, 135, 135);
+    border-radius: 2%;
+    font-weight: bold;
+    color: white;
+}
+
+.articuloPopUp:hover{
+    cursor: pointer;
+}
 
 .bocadillo,
 .platillo {

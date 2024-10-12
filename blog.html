@@ -76,13 +76,25 @@
             <aside id="menuAside">
 
                 <br><br>
-                <p>Recetas</p>
+                <a class="linksAside" target="_blank" href="https://cookpad.com/cr/buscar/comida%20caribena">
+                    <p>Recetas</p>
+                </a>
                 <br><br>
-                <p>Turismo</p>
+                <a class="linksAside" target="_blank"
+                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
+                    <p>Turismo</p>
+                </a>
                 <br><br>
-                <p>Boletines semanales</p>
+                <a class="linksAside" target="_blank"
+                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
+                    <p>Boletines semanales</p>
+                </a>
                 <br><br>
-                <p>Subscripción </p>
+                <a class="linksAside" target="_blank"
+                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
+                    <p>Subscripción </p>
+                </a>
+
             </aside>
 
             <button id="hamburguesa" class="menu-hamburguesa">☰</button>
@@ -97,33 +109,83 @@
                     <div class="articulo">
                         <!--Titulo TipsDecocina-->
 
-                        <a class="linksComidas" href="/mnuPlatillos.html">
-                            <h4> Tutoriales de cocina </h4>
+                        <a class="abrirPopUp1" href="#">
+                            <h4> Tips de cocina </h4>
                         </a>
 
+                        <!-- Div para el popup1-->
+                        <div id="overlay"></div>
+                        <div id="popup1">
+                            <span class="btnCerrar" data-popup="popup1">&times;</span>
+                            <p>Dale click a cualquiera de las dos imágenes para ver
+                                el contenido del artículo.
+                            </p>
+
+                            <!--Div contenido dentro del pop para articulo-->
+                            <div class="articuloPopUp">
+                                <img class="popUpImagen" src="/img/blog/condimentosCaribe.jpg" />
+                                <p>¿Cómo usar condimentos caribeños?</p>
+
+                            </div>
+
+                            <!--Div contenido dentro del pop para articulo-->
+                            <div class="articuloPopUp">
+                                <img class="popUpImagen" src="/img/blog/pati.jpg" />
+                                <p>¿Cómo preparar patí? Fácil y sencillo</p>
+                            </div>
+
+                        </div>
+
                         <p>En esta sección encontrarás algunos tutoriales para
-                            preparar platillos o bocadillos caribeños.
+                            ayudarte a darle un buen sazón a tus recetas caribeñas.
                         </p>
-                        <a class="linksComidas" href="/mnuPlatillos.html">
+
+                        <a class="abrirPopUp1" href="#">
                             <img src="./img/blog/RiceAndBeansComidaCaribeña.jpg">
                         </a>
+
                     </div>
+
 
                     <!--Contenedor HistoriaDelCaribe-->
                     <div class="articulo">
                         <!--Titulo HistoriaDelCaribe-->
 
-                        <a class="linksComidas" href="/mnuPlatillos.html">
+                        <a class="abrirPopUp2" href="#">
                             <h4> Historia del Caribe</h4>
                         </a>
+
+                        <!-- Div para el popup2-->
+                        <div id="overlay"></div>
+                        <div id="popup2">
+                            <span class="btnCerrar" data-popup="popup2">&times;</span>
+                            <p>Dale click a cualquiera de las dos imágenes para ver
+                                el contenido del artículo.
+                            </p>
+
+                            <!--Div contenido dentro del pop para articulo-->
+                            <div class="articuloPopUp">
+                                <img class="popUpImagen" src="/img/blog/trenAtlantico.jpg" />
+                                <p>¿Cómo se construyó el tren al atlántico?</p>
+
+                            </div>
+
+                            <!--Div contenido dentro del pop para articulo-->
+                            <div class="articuloPopUp">
+                                <img class="popUpImagen" src="/img/blog/culturaAfro.jpg" />
+                                <p>Influencia de la cultura afro en Costa Rica.</p>
+                            </div>
+
+                        </div>
 
                         <p>En esta sección encontrarás pequeños artículos de historia 
                             caribeña costarricense y su influencia cultural.
                         </p>
-                        <a class="linksComidas" href="/mnuPlatillos.html">
+
+                        <a class="abrirPopUp2" href="#">
                             <img src="./img/blog/caribe.jpg">
                         </a>
-                        </a>
+
                     </div>
                 </div>
             </section>
@@ -138,7 +200,7 @@
 
             <!--Contenedor de Facebook-->
             <div class="contenedorFacebook">
-                <a class=linkFacebook href="https://www.facebook.com/profile.php?id=100083469393808">
+                <a class=linkFacebook target="_blank" href="https://www.facebook.com/profile.php?id=100083469393808">
                     <img src="img/principal/fbLogo.png" />
                 </a>
             </div>

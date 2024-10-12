@@ -20,6 +20,7 @@ vertical del content/main de la página web */
     }
 }
 
+
 /* Estilizado general para que todo el contenido sea responsivo*/
 * {
     margin: 0;
@@ -133,11 +134,15 @@ nav ul li a {
 }
 
 /*Estilizado para los links de las comidas (menú principal)*/
-.linksComidas {
+.linksComidas,
+.abrirPopUp1,
+.abrirPopUp2,
+.linksAside {
     /*Aplicar el color al texto de los elementos*/
     color: #1a1919;
     text-decoration: solid;
 }
+
 
 .menu-hamburguesa,
 .boton-cerrar {
@@ -268,6 +273,8 @@ tenga un máximo de 768px (pantallas móviles)*/
 /*Aplicar la animación por medio del hover*/
 .contenedorComida img:hover,
 .contenedorLogo img:hover,
+.contenedorFacebook img:hover,
+.linksAside p:hover,
 nav ul li:hover {
     transform: scale(1.25);
     cursor: pointer;
@@ -302,6 +309,64 @@ aside p {
     font-weight: bold;
     text-transform: uppercase;
     font-size: smaller;
+}
+
+#popup1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    gap: 1em;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 2px solid #333;
+    border-radius: 5%;
+    box-shadow: 0 0 15px rgba (0, 0, 0, 0.2);
+    z-index: 1000;
+
+}
+#popup2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    gap: 1em;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 2px solid #333;
+    border-radius: 5%;
+    box-shadow: 0 0 15px rgba (0, 0, 0, 0.2);
+    z-index: 1000;
+
+}
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+
+}
+
+
+
+.btnCerrar {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    color: red;
+    font-size: 150%;
+    font-weight: bold;
+
 }
 
 footer {
