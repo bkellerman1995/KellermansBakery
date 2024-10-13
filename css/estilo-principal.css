@@ -62,6 +62,18 @@ header {
 
 }
 
+h1 {
+    text-align: center;
+    background-color: #f5f5dc;
+    height: 100%;
+    margin-top: 1%;
+}
+
+#inicioTexto{
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+}
 
 /* Clase que oculta el header moviéndolo hacia arriba */
 .oculto {
@@ -281,9 +293,6 @@ nav ul li:hover {
     transition: transform ease-in 0.25s;
 }
 
-.seccionBocadillos {
-    animation: animacionFadeIn ease 2s;
-}
 
 h2 {
     text-align: center;
@@ -311,23 +320,7 @@ aside p {
     font-size: smaller;
 }
 
-#popup1 {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    gap: 1em;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border: 2px solid #333;
-    border-radius: 5%;
-    box-shadow: 0 0 15px rgba (0, 0, 0, 0.2);
-    z-index: 1000;
-
-}
-#popup2 {
+#popup1, #popup2 {
     display: none;
     position: fixed;
     top: 50%;

@@ -1,9 +1,15 @@
-.contenedorComida {
+.contenedorComida,
+.contenedorMnu {
     /*flex: 25%;*/
     flex: calc(100vw /5);
-    padding: 1rem;
-    border-radius: 5px;
+    padding: 2rem;
+    gap: 1rem;
     text-align: center;
+    border-radius: 10%;
+    background-color: #f5f5dc;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+
     /*Aplicar animacion de fade in al contenedor de comida*/
     animation: animacionFadeIn ease 2s;
 }
@@ -22,8 +28,87 @@
     transition: transform ease-in 0.10s;
 }
 
+/*Estilizado de las imagenes de comida (menu)*/
+.contenedorMnu img {
+
+    /*Aplicar ancho y alto a las imágenes en contenedorComida*/
+    max-width: 100%;
+    height: 50%;
+
+    /*Esquinas redondeadas al 100%*/
+    border-radius: 30%;
+
+
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrusel-imgs {
+
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Suaviza la transición entre imágenes */
+}
+
+.carrusel-imgs img {
+    max-width: 100%;
+    /* Ajusta el ancho para que coincida con el contenedor */
+    height: 300px;
+    /* Fija la altura deseada del carrusel */
+    object-fit: cover;
+    /* Escala la imagen para llenar el espacio sin distorsión */
+    display: none;
+    /* Oculta todas las imágenes por defecto */
+}
+
+.carrusel-imgs img.active {
+    display: block;
+}
+
+button {
+    font-size: 24px;
+    /* Aumenta el tamaño del texto (ícono de flecha) */
+    padding: 15px;
+    /* Agrega más espacio alrededor del ícono */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Color de fondo para mejor visibilidad */
+    border: none;
+    /* Elimina el borde del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 5px;
+    /* Opcional: redondea las esquinas */
+    width: 50px;
+    /* Ajusta el ancho del botón */
+    height: 50px;
+    /* Ajusta la altura del botón */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 2%;
+}
+
+.next {
+    right: 2%;
+}
+
+
 /*Estilizado del aside junto con los articulos*/
-.contenedorBlog, .contenedorArt1 {
+.contenedorBlog,
+.contenedorArt1 {
     display: flex;
     justify-content: flex-start;
     /*para que el aside abarque el mismo alto 
@@ -36,26 +121,24 @@
 
 }
 
-.contenedorArt1 article{
+.contenedorArt1 article {
     padding-left: 2%;
 }
 
-.contenedorArt1 article h1,h2 {
+.contenedorArt1 article h1,
+h2 {
     text-align: center;
 }
 
-.contenedorArt1 p, .contenedorBlog aside p {
-    padding-right:2%;
+.contenedorArt1 p,
+.contenedorBlog aside p {
+    padding-right: 2%;
     box-shadow: 10px 5px 5px brown;
 }
 
-.contenedorArt1 p img {
-    width: 25%;
-    margin-right: 50%;
-    border-radius: 10%;
-}
 
 .contenedorArt1 img {
+
     width: 25%;
     margin-left: 35%;
     border-radius: 10%;
@@ -68,11 +151,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 auto; /* Ensures horizontal centering */
+        margin: 0 auto;
+        /* Ensures horizontal centering */
     }
-    
+
     .contenedorLogo img {
-        max-width: 150px; /* Smaller logo size for mobile */
+        max-width: 150px;
+        /* Smaller logo size for mobile */
         height: auto;
     }
 
@@ -88,18 +173,24 @@
         margin-top: 10px;
     }
 
-    .contenedorComida {
+    .contenedorComida, .contenedorMnu {
         flex: calc(100vw /1);
     }
 
+
     aside {
-        position: fixed; /* El menú estará fijo en el lateral */
-        left: -100%; /* Oculto fuera de la vista por defecto */
+        position: fixed;
+        /* El menú estará fijo en el lateral */
+        left: -100%;
+        /* Oculto fuera de la vista por defecto */
         top: 0;
-        height: 100%; /* Ocupa todo el alto de la pantalla */
-        width: 40%; /* Ancho del menú tipo hamburguesa */
+        height: 100%;
+        /* Ocupa todo el alto de la pantalla */
+        width: 40%;
+        /* Ancho del menú tipo hamburguesa */
         background-color: #a0522d;
-        transition: left 0.3s ease; /* Transición suave al abrir/cerrar */
+        transition: left 0.3s ease;
+        /* Transición suave al abrir/cerrar */
 
     }
 
@@ -115,7 +206,8 @@
     }
 
     aside.open {
-        left:0; /*Mostrar el menú aside */
+        left: 0;
+        /*Mostrar el menú aside */
     }
 
     .boton-cerrar {
@@ -126,4 +218,12 @@
         cursor: pointer;
         margin: 10px;
     }
+
+    .contenedorArt1 img {
+
+        width: 50%;
+        margin-left: 27%;
+        border-radius: 10%;
+    }
+
 }

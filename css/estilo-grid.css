@@ -20,8 +20,7 @@
     gap: 1rem;
 }
 
-.contenedor-articulos
- {
+.contenedor-articulos {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
@@ -30,21 +29,22 @@
 
 /*Estilizado del contenedorRedesSociales */
 
-.contenedorRedesSociales  {
+.contenedorRedesSociales {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     align-items: center;
     justify-items: center;
     gap: 10px;
-    
+
 }
 
-.contenedorFacebook, .linkFacebook {
+.contenedorFacebook,
+.linkFacebook {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto; 
+    height: auto;
 }
 
 
@@ -67,7 +67,8 @@
 .bocadillo img:hover,
 .platillo img:hover {
     transform: scale(1.25);
-    cursor: pointer;;
+    cursor: pointer;
+    ;
 }
 
 .articuloPopUp {
@@ -78,18 +79,20 @@
     color: white;
 }
 
-.articuloPopUp:hover{
+.articuloPopUp:hover {
     cursor: pointer;
 }
 
 .bocadillo,
 .platillo {
-    background-color: #f4f4f4;
+    background-color: #f5f5dc;
     border: 1px solid #ddd;
     padding: 1rem;
     border-radius: 10%;
     text-align: center;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    /*Aplicar animacion de fade in a los contenedores*/
+    animation: animacionFadeIn ease 2s;
 }
 
 .articulo {
@@ -112,17 +115,19 @@
     transition: transform ease-in 0.10s;
 }
 
-@media (max-width:480px){
+@media (max-width:480px) {
 
     .contenedorLogo {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 auto; /* Ensures horizontal centering */
+        margin: 0 auto;
+        /* Ensures horizontal centering */
     }
-    
+
     .contenedorLogo img {
-        max-width: 150px; /* Smaller logo size for mobile */
+        max-width: 150px;
+        /* Smaller logo size for mobile */
         height: auto;
     }
 
@@ -147,4 +152,3 @@
         padding: 1em;
     }
 }
-
