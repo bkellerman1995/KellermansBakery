@@ -27,6 +27,8 @@
     gap: 5rem;
 }
 
+
+
 /*Estilizado del contenedorRedesSociales */
 
 .contenedorRedesSociales {
@@ -107,12 +109,21 @@
 }
 
 
-.articulo img {
+.articulo img, .popUpImagen {
     max-width: 100%;
-    height: auto;
+    height: 60%;
     background-size: cover;
     border-radius: 10%;
     transition: transform ease-in 0.10s;
+}
+
+#textoPopUpBoletin {
+    color: #0e0e0e;
+    text-decoration: solid;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: smaller;
+    box-shadow: none;
 }
 
 @media (max-width:480px) {

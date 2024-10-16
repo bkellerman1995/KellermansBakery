@@ -69,10 +69,20 @@ h1 {
     margin-top: 1%;
 }
 
-#inicioTexto{
+#inicioTexto {
     padding-left: 2%;
     padding-right: 2%;
     text-align: center;
+}
+
+#listaInicioTexto {
+    list-style:none;
+    text-align: justify;
+}
+
+#listaInicioTexto li::before {
+    content: "★";
+    color:#8B4513;
 }
 
 /* Clase que oculta el header moviéndolo hacia arriba */
@@ -149,6 +159,7 @@ nav ul li a {
 .linksComidas,
 .abrirPopUp1,
 .abrirPopUp2,
+.abrirPopUp3,
 .linksAside {
     /*Aplicar el color al texto de los elementos*/
     color: #1a1919;
@@ -320,10 +331,11 @@ aside p {
     font-size: smaller;
 }
 
-#popup1, #popup2 {
+#popup1, #popup2, #popup3 {
     display: none;
     position: fixed;
     top: 50%;
+    bottom: auto;
     left: 50%;
     gap: 1em;
     transform: translate(-50%, -50%);

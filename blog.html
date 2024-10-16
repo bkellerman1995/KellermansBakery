@@ -53,10 +53,11 @@
         <nav>
             <ul> <!--Para estilizar el nav (elementos)-->
                 <li><a href="index.html">INICIO</a></li>
-                <li><a href="#">NOSOTROS</a></li>
-                <li><a href="#">MENÚ</a></li>
+                <li><a href="Nosotros.html">NOSOTROS</a></li>
+                <li><a href="mnu.html">MENÚ</a></li>
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="#">CONTACTO</a></li>
+                <li><a href="">FAQs</a></li>
                 <li><a href="#">ACERCA DE</a></li>
             </ul>
         </nav>
@@ -85,10 +86,25 @@
                     <p>Turismo</p>
                 </a>
                 <br><br>
-                <a class="linksAside" target="_blank"
-                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
-                    <p>Boletines semanales</p>
+
+                <a class="abrirPopUp3" href="#">
+                    <p>Boletin</p>
                 </a>
+                <!-- Div para el popup3-->
+                <div id="overlay"></div>
+                <div id="popup3">
+                    <span class="btnCerrar" data-popup="popup3">&times;</span>
+                    <p id="textoPopUpBoletin">
+                        ¡Ya podés pedir tu queque navideño de temporada!
+                    </p>
+
+                    <!--Div contenido dentro del pop para articulo-->
+                    <div class="articuloPopUp">
+                        <img class="popUpImagen" src="/img/mnuBocadillos/queque navideño.jpeg" />
+                        <p id="textoPopUpBoletin">POR TAN SOLO 5000 COLONES</p>
+                    </div>
+                </div>
+
                 <br><br>
                 <a class="linksAside" target="_blank"
                     href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
@@ -197,7 +213,11 @@
 
                     </div>
                 </div>
-            </section>
+
+        </div>
+
+        </section>
+
         </div>
 
     </main>

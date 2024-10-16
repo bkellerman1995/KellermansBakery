@@ -17,6 +17,7 @@ document.getElementById('btnCerrar').addEventListener('click', function () {
 const overlay = document.getElementById('overlay');
 const popup1 = document.getElementById('popup1');
 const popup2 = document.getElementById('popup2');
+const popup3 = document.getElementById('popup3');
 
 // Función para abrir el popup
 
@@ -47,6 +48,14 @@ document.querySelectorAll('.abrirPopUp2').forEach(link => {
     });
 });
 
+// Event listeners para cada uno de los links (popUp3)
+document.querySelectorAll('.abrirPopUp3').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        openPopup(popup3);
+    });
+});
+
 //Event listeners para los botones de cierre
 document.querySelectorAll('.btnCerrar').forEach(button => {
     button.addEventListener('click', function() {
@@ -60,6 +69,7 @@ document.querySelectorAll('.btnCerrar').forEach(button => {
 overlay.addEventListener('click', function () {
     closePopup(popup1);
     closePopup(popup2);
+    closePopup(popup3);
 });
 
 
