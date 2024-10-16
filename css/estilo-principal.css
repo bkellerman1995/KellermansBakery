@@ -160,6 +160,7 @@ nav ul li a {
 .abrirPopUp1,
 .abrirPopUp2,
 .abrirPopUp3,
+.abrirPopUp4,
 .linksAside {
     /*Aplicar el color al texto de los elementos*/
     color: #1a1919;
@@ -331,7 +332,7 @@ aside p {
     font-size: smaller;
 }
 
-#popup1, #popup2, #popup3 {
+#popup1, #popup2, #popup3, #popup4 {
     display: none;
     position: fixed;
     top: 50%;
@@ -350,6 +351,21 @@ aside p {
 }
 
 
+#btnSubscribirse {
+
+    width: 50%;
+    margin-left: 10%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    left: 15%;
+    margin-top: 35%;
+    background-color: #8B4513;
+    line-height: 10%;
+    
+}
+
 #overlay {
     display: none;
     position: fixed;
@@ -363,7 +379,6 @@ aside p {
 }
 
 
-
 .btnCerrar {
     display: block;
     text-align: right;
@@ -372,6 +387,10 @@ aside p {
     font-size: 150%;
     font-weight: bold;
 
+}
+
+#email {
+    border-radius: 5px;
 }
 
 footer {

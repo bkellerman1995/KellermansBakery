@@ -90,6 +90,7 @@
                 <a class="abrirPopUp3" href="#">
                     <p>Boletin</p>
                 </a>
+
                 <!-- Div para el popup3-->
                 <div id="overlay"></div>
                 <div id="popup3">
@@ -101,15 +102,31 @@
                     <!--Div contenido dentro del pop para articulo-->
                     <div class="articuloPopUp">
                         <img class="popUpImagen" src="/img/mnuBocadillos/queque navideño.jpeg" />
-                        <p id="textoPopUpBoletin">POR TAN SOLO 5000 COLONES</p>
+                        <p id="textoPopUpBoletin">POR TAN SOLO &#8353 5000 </p>
                     </div>
                 </div>
 
                 <br><br>
-                <a class="linksAside" target="_blank"
-                    href="https://www.ict.go.cr/flipbook/guias/PDF/GUIA%20DE%20CARIBE.pdf">
-                    <p>Subscripción </p>
+
+                <a class="abrirPopUp4" href="#">
+                    <p>Subscripción</p>
                 </a>
+
+                <!-- Div para el popup4-->
+                <div id="overlay"></div>
+                <div id="popup4">
+                    <span class="btnCerrar" data-popup="popup4">&times;</span>
+                    <p id="textoPopUpBoletin">
+                        ¡Ingresa un correo electrónico para subscribirte
+                        a nuestros boletines/ofertas y más!
+                    </p>
+                    <input type="email" id="email" pattern=".+@example\.com" size="30" required />
+
+                    <br><br>
+
+                    <button onclick ="guardarCorreo()" id="btnSubscribirse">Suscribirse</button>
+
+                </div>
 
             </aside>
 

@@ -136,6 +136,11 @@ h2 {
     box-shadow: 10px 5px 5px brown;
 }
 
+.abrirPopUp3 p:hover, .abrirPopUp4 p:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    transition: transform ease-in 0.25s;
+}
 
 .contenedorArt1 img {
 
