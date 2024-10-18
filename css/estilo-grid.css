@@ -6,12 +6,6 @@
 
 }
 
-.contenidoBlog {
-    background-color: #f5f5dc;
-    min-height: 100%;
-
-}
-
 .contenedor-bocadillos,
 .contenedor-platillos {
     display: grid;

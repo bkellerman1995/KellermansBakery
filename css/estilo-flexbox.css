@@ -107,27 +107,43 @@ button {
 
 
 /*Estilizado del aside junto con los articulos*/
-.contenedorBlog,
-.contenedorArt1 {
+.contenedorBlog {
     display: flex;
+
+
     justify-content: flex-start;
     /*para que el aside abarque el mismo alto 
     que los contenedores a su derecha*/
     align-items: stretch;
-
     /*Hacer que el contenedor (contenedorBlog) abarque el alto 
     de la pantalla*/
     min-height: 100vh;
 
 }
 
+
+.contenidoBlog {
+    display: flex;
+    background-color: #f5f5dc;
+    min-height: 100vh;
+    
+}
+
+.contenedorArt1 {
+    display: flex;
+    align-items: normal;
+}
+
 .contenedorArt1 article {
-    padding-left: 2%;
+    width: 80%;
+    padding-left: 15%;
+
 }
 
 .contenedorArt1 article h1,
 h2 {
     text-align: center;
+    bottom:auto;
 }
 
 .contenedorArt1 p,
@@ -205,7 +221,7 @@ h2 {
         color: white;
         font-size: 30px;
         border: none;
-        padding: 10px;
+        padding: 5px;
         cursor: pointer;
         position: fixed;
     }
@@ -230,5 +246,11 @@ h2 {
         margin-left: 27%;
         border-radius: 10%;
     }
+
+    #email{
+        width: 100%;
+    }
+
+
 
 }
