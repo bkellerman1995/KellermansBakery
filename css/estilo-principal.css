@@ -75,14 +75,14 @@ h1 {
 }
 
 #listaInicioTexto {
-    list-style:none;
-    text-align:left;
+    list-style: none;
+    text-align: left;
     padding-right: 2%;
 }
 
 #listaInicioTexto li::before {
     content: "★";
-    color:#8B4513;
+    color: #8B4513;
 }
 
 /* Clase que oculta el header moviéndolo hacia arriba */
@@ -172,6 +172,24 @@ nav ul li a {
 .boton-cerrar {
     display: none;
 }
+
+/*Estilizado del contenido de página de FAQs */
+.contenidoFAQs {
+    background-color: #f5f5dc;
+    min-height: 100vh;
+}
+
+.contenidoFAQs article h2 {
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.contenidoFAQs article p {
+    padding-right: 2%;
+    padding-left: 2%;
+    box-shadow: 10px 5px 5px brown;
+}
+
 
 /*(Media query) Chequear que la pantalla del dispositivo 
 tenga un máximo de 768px (pantallas más pequeñas)*/
@@ -333,7 +351,10 @@ aside p {
     font-size: smaller;
 }
 
-#popup1, #popup2, #popup3, #popup4 {
+#popup1,
+#popup2,
+#popup3,
+#popup4 {
     display: none;
     position: fixed;
     top: 50%;
@@ -365,7 +386,7 @@ aside p {
     margin-top: 35%;
     background-color: #8B4513;
     line-height: 10%;
-    
+
 }
 
 #overlay {
