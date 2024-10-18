@@ -14,6 +14,13 @@
     gap: 1rem;
 }
 
+.contenedorContactos{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
 .contenedor-articulos {
     display: grid;
     justify-content: center;
@@ -80,7 +87,8 @@
 }
 
 .bocadillo,
-.platillo {
+.platillo,
+.contactoCard {
     background-color: #f5f5dc;
     border: 1px solid #ddd;
     padding: 1rem;
@@ -90,6 +98,54 @@
     /*Aplicar animacion de fade in a los contenedores*/
     animation: animacionFadeIn ease 2s;
 }
+
+.contactarNegocio {
+    display: grid;
+    background-color: #f5f5dc;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10%;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    /*Aplicar animacion de fade in a los contenedores*/
+    animation: animacionFadeIn ease 2s;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    position: relative;
+    
+}
+
+.contactarNegocio h6 {
+    text-align: left;
+}
+
+.contactarNegocio label {
+    text-align: left;
+}
+
+.contactarNegocio input, textarea {
+    border-radius: 10px;
+}
+
+
+#btnEnviarInfo {
+    width: 50%;
+    margin-left: 10%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    left: 15%;
+    background-color: #8B4513;
+    line-height: 10%;
+    position: absolute;
+    margin-top: auto;
+    bottom: 0px;
+
+}
+
+
 
 .articulo {
 
@@ -151,7 +207,8 @@
 
     .contenedor-bocadillos,
     .contenedor-platillos,
-    .contenedor-articulos {
+    .contenedor-articulos,
+    .contenedorContactos {
         display: grid;
         grid-template-columns: 1fr;
         padding: 1em;

@@ -74,16 +74,6 @@ h1 {
     text-align: center;
 }
 
-#listaInicioTexto {
-    list-style: none;
-    text-align: left;
-    padding-right: 2%;
-}
-
-#listaInicioTexto li::before {
-    content: "★";
-    color: #8B4513;
-}
 
 /* Clase que oculta el header moviéndolo hacia arriba */
 .oculto {
@@ -176,7 +166,7 @@ nav ul li a {
 /*Estilizado del contenido de página de FAQs */
 .contenidoFAQs {
     background-color: #f5f5dc;
-    min-height: 100vh;
+    height:100%;
 }
 
 .contenidoFAQs article h2 {
@@ -301,7 +291,7 @@ tenga un máximo de 768px (pantallas móviles)*/
 /*Estilizado del contenido principal*/
 .contenedorPrincipal {
     background-color: #f5f5dc;
-    min-height: 600px;
+    height: 100%;
 
     /*Alinear los 3 contenedores en linea*/
     display: flex;
