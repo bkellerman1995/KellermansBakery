@@ -49,6 +49,20 @@
     overflow: hidden;
 }
 
+.videoMenu {
+    text-align: center;
+    position:relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.videoMenu video {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 .carrusel-imgs {
 
     width: 100%;
@@ -194,7 +208,7 @@ h2 {
         margin-top: 10px;
     }
 
-    .contenedorComida, .contenedorMnu {
+    .contenedorComida, .contenedorMnu, .contenedorNosotros {
         flex: calc(100vw /1);
     }
 

@@ -137,3 +137,77 @@ function downloadData() {
     document.body.removeChild(a); // Elimina el enlace del DOM
     URL.revokeObjectURL(url); // Revoca el objeto URL
 }
+
+function enviarInfo() {
+    // Captura los valores de los campos
+    const phoneRegex = /^\d{8}$/; // Validar que el teléfono tenga entre 8 y 15 dígitos
+    const telefono = document.getElementById("telefonoUsuario").value.trim();
+    const nombre = document.getElementById("nombreUsuario").value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const correo = document.getElementById("email").value.trim();
+    const comentarios = document.getElementById("textArea").value.trim();
+
+    // Validar los campos
+    if (!phoneRegex.test(telefono)) {
+        alert("Por favor, introduce un número de teléfono válido (8 dígitos).");
+        return;
+    }
+    if (nombre === "") {
+        alert("Por favor, introduce un nombre.");
+        return;
+    }
+    if (!emailRegex.test(correo)) {
+        alert("Por favor, introduce un correo electrónico válido.");
+        return;
+    }
+
+    // Verifica si hay datos existentes en el localStorage
+    let data = JSON.parse(localStorage.getItem("myData")) || [];
+
+    // Verificar si el correo ya existe en los datos almacenados
+    if (data.some(entry => entry.correo === correo)) {
+        alert("El correo ya está registrado.");
+        return;
+    }
+
+    // Agrega el nuevo dato al array
+    data.push({
+        telefono: telefono,
+        nombre: nombre,
+        correo: correo,
+        comentarios: comentarios
+    });
+
+    // Guarda el array actualizado en localStorage como JSON
+    localStorage.setItem("myData", JSON.stringify(data));
+
+    alert("Gracias por tu información. Nos contactactaremos de vuelta contigo lo más pronto posible");
+
+    // Limpiar los campos del formulario
+    document.getElementById("telefonoUsuario").value = "";
+    document.getElementById("nombre").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("comentarios").value = "";
+
+    // Actualizar la lista de información en la interfaz
+    mostrarInformacion();
+}
+
+function mostrarInformacion() {
+    // Obtener la lista de datos almacenados
+    const data = JSON.parse(localStorage.getItem("myData")) || [];
+    const infoList = document.getElementById("infoList");
+
+    // Limpiar la lista actual
+    infoList.innerHTML = "";
+
+    // Crear los elementos de la lista
+    data.forEach(entry => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `Teléfono: ${entry.telefono}, Nombre: ${entry.nombre}, Correo: ${entry.correo}, Comentarios: ${entry.comentarios}`;
+        infoList.appendChild(listItem);
+    });
+}
+
+// Inicializar la lista al cargar la página
+document.addEventListener("DOMContentLoaded", mostrarInformacion);

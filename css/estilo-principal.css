@@ -1,9 +1,9 @@
 /*CSS externo*/
 
-/* @font-face {
+@font-face {
     font-family: FuenteDeWeb;
     src: url("../fonts/Crispy\ Food\ DEMO.ttf");
-} */
+}
 
 
 /*Animaciones por medio de keyframes */
@@ -27,6 +27,8 @@ vertical del content/main de la página web */
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: FuenteDeWeb,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
 }
 
 /*Estilizado del cuerpo*/
@@ -167,6 +169,7 @@ nav ul li a {
 .contenidoFAQs {
     background-color: #f5f5dc;
     height:100%;
+    
 }
 
 .contenidoFAQs article h2 {
@@ -361,8 +364,6 @@ aside p {
     z-index: 1000;
 
 }
-
-
 
 #btnSubscribirse {
 

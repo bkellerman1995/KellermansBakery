@@ -59,7 +59,7 @@
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="Contacto.html">CONTACTO</a></li>
                 <li><a href="FAQs.html">FAQs</a></li>
-                <li><a href="#">ACERCA DE</a></li>
+                <li><a href="AcercaDe.html">ACERCA DE</a></li>
             </ul>
         </nav>
     </header>
@@ -106,16 +106,17 @@
 
                     
                     <label for = "telefonoUsuario"><b>Teléfono</b></label>
-                    <input type = "tel" id = "telefonoUsuario">
+                    <input type = "tel" id = "telefonoUsuario" name="telefonoUsuario">
 
                     <label for = "nombreUsuario"><b>Nombre</b></label>
-                    <input type = "text" id ="nombreUsuario">
+                    <input type = "text" id ="nombreUsuario" name="nombreUsuario">
 
                     <label for = "email"><b>Correo</b></label>
-                    <input autocomplete="on" type="email" id="email" pattern=".+@example\.com" size="30" required />
+                    <input autocomplete="on" type="email" id="email" pattern=".+@example\.com" size="30" required 
+                    name = "email"/>
 
                     <label for = "textArea"><b>Comentarios</b></label>
-                    <textarea id = "textArea" rows="1" cols = "20"></textarea>
+                    <textarea id = "textArea" rows="1" cols = "20" name="comentarios"></textarea>
 
                     <br><br><br>
                     <button onclick ="enviarInfo()" id="btnEnviarInfo">Enviar</button>
@@ -144,7 +145,7 @@
         © 2024, Caribbean Culinary Delights. Todos los derechos reservados.
     </footer>
 
-    <script src="js/scripts2.js"> type = "text/javascript"</script>
+    <script src="js/scripts.js"> type = "text/javascript"</script>
 </body>
 
 </html>
