@@ -273,6 +273,10 @@
         margin-top: 10px;
     }
 
+    nav ul li {
+        background-color: rgb(67, 34, 34);
+    }
+
     .contenedor-bocadillos,
     .contenedor-platillos,
     .contenedor-articulos,

@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: FuenteDeWeb;
-    src: url("../fonts/Crispy\ Food\ DEMO.ttf");
+    src: url("../fonts/Bellfoods.otf");
 }
 
 
@@ -253,6 +253,7 @@ tenga un máximo de 768px (pantallas móviles)*/
         /*Agregar un margen de 10 px 
         arriba */
         margin-top: 10px;
+        
     }
 
     aside p {
