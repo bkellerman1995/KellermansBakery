@@ -14,7 +14,22 @@
     gap: 1rem;
 }
 
-.contenedorNosotros,.contenedorAcercaDe {
+.contenedorNosotros {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.contenedorAcercaDe {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+
+#Organizacion {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
@@ -67,8 +82,18 @@
     transition: transform ease-in 0.10s;
 }
 
-.acercaDe img{
-    width: 70%;
+
+#divOrganizacion1 img,
+#divOrganizacion2 img{
+    width: 20%;
+    height: 90%;
+    background-size: cover;
+    border-radius: 10%;
+
+}
+
+.acercaDe img {
+    width: 80%;
     height: 90%;
     background-size: cover;
     border-radius: 10%;
@@ -107,7 +132,9 @@
 .platillo,
 .contactoCard,
 .nosotros,
-.acercaDe {
+.acercaDe,
+#divOrganizacion1,
+#divOrganizacion2 {
     background-color: #f5f5dc;
     border: 1px solid #ddd;
     padding: 1rem;
@@ -249,9 +276,18 @@
     .contenedor-bocadillos,
     .contenedor-platillos,
     .contenedor-articulos,
-    .contenedorContactos {
+    .contenedorContactos,
+    .contenedorAcercaDe {
         display: grid;
         grid-template-columns: 1fr;
         padding: 1em;
+    }
+
+    #divOrganizacion1 img,
+    #divOrganizacion2 img {
+        width: 80%;
+        height: 90%;
+        background-size: cover;
+        border-radius: 10%;
     }
 }
