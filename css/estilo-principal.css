@@ -366,7 +366,23 @@ aside p {
 
 }
 
-#btnSubscribirse {
+#btnDetalles, #btnAgregarCarrito {
+
+    position: absolute;
+    width: 50%;
+    margin-left: 10%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+
+    left: 15%;
+    margin-top: 35%;
+    background-color: #8B4513;
+    line-height: 10%;
+
+}
+
+#btnSubscribirse{
 
     width: 50%;
     margin-left: 10%;
