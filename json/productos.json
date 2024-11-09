@@ -1,0 +1,173 @@
+[
+  {
+    "id": "1",
+    "nombre": "Volovanes",
+    "precio": 500,
+    "categoria": "Bocadillos",
+    "descripcion": "Rellenos con queso crema y especias",
+    "imagen": "../img/mnu/volovanes.jpeg"
+  },
+
+  {
+    "id": "2",
+    "nombre": "Patí",
+    "precio": 300,
+    "categoria": "Bocadillos",
+    "descripcion": "Relleno con carne y chile panameño",
+    "imagen": "../img/mnu/pati.jpeg"
+  },
+
+
+  {
+    "id": "3",
+    "nombre": "Tartas de manzana",
+    "precio": 300,
+    "categoria": "Bocadillos",
+    "descripcion": "Mini tartas rellenas de dulce de manzana",
+    "imagen": "/img/mnu/tartaManzana.jpeg"
+  },
+
+  {
+    "id": "4",
+    "nombre": "Enchiladas",
+    "precio": 300,
+    "categoria": "Bocadillos",
+    "descripcion": "Rellenas de pollo o de carne",
+    "imagen": "/img/mnu/enchilada.jpeg"
+  },
+
+  {
+    "id": "5",
+    "nombre": "Empanadas de masa",
+    "precio": 750,
+    "categoria": "Bocadillos",
+    "descripcion": "Rellenas con queso o pollo",
+    "imagen": "/img/mnu/empanadas.jpeg"
+  },
+  {
+    "id": "6",
+    "nombre": "Pan Bon",
+    "precio": 5000,
+    "categoria": "Bocadillos",
+    "descripcion": "Con pasas, frutillas y glaseado de caramelo",
+    "imagen": "/img/mnu/panBon.jpeg"
+  }, 
+
+  {
+    "id": "7",
+    "nombre": "Mini pies de limón",
+    "precio": 300,
+    "categoria": "Bocadillos",
+    "descripcion": "Con topping de merengue y frutilla",
+    "imagen": "/img/mnu/miniPieLimon.jpeg"
+  }, 
+
+  {
+    "id": "8",
+    "nombre": "Cangrejos dulces",
+    "precio": 250,
+    "categoria": "Bocadillos",
+    "descripcion": "Rellenos de dulce de leche",
+    "imagen": "/img/mnu/cangrejoDulceLeche.jpeg"
+  },
+
+  {
+    "id": "9",
+    "nombre": "Rice and Beans",
+    "precio": 6000,
+    "categoria": "Platillos",
+    "descripcion": "Delicioso Rice and Beans con pollo caribeño",
+    "imagen": "/img/mnu/riceAndBeans.jpeg"
+  }, 
+
+  {
+    "id": "10",
+    "nombre": "Pastel de pollo",
+    "precio": 6000,
+    "categoria": "Platillos",
+    "descripcion": "Pastel de pollo fresco acompañado con ensalada de lechuga y tomate",
+    "imagen": "/img/mnu/pastelPolloEnsalada.jpg"
+  },
+
+  {
+    "id": "11",
+    "nombre": "Lasaña de pollo",
+    "precio": 6000,
+    "categoria": "Platillos",
+    "descripcion": "Lasaña de pollo fresco acompañado con ensalada de lechuga y tomate",
+    "imagen": "/img/mnu/lasannaPolloEnsalada.webp"
+  }, 
+
+  {
+    "id": "12",
+    "nombre": "Tartaleta de fresa",
+    "precio": 350,
+    "categoria": "Postres",
+    "descripcion": "Rellenas de leche condensada con trozos de fresa encima",
+    "imagen": "/img/mnu/tartaletaFresa.jpeg"
+  },
+
+  {
+    "id": "13",
+    "nombre": "Tartaleta de Kiwi",
+    "precio": 400,
+    "categoria": "Postres",
+    "descripcion": "Rellenas de leche condensada con trozos de kiwi encima",
+    "imagen": "/img/mnu/tartaletaKiwi.jpeg"
+  },
+
+  {
+    "id": "14",
+    "nombre": "Canastitas de melocotón",
+    "precio": 350,
+    "categoria": "Postres",
+    "descripcion": "Rellenas de leche condensada y melocotón encima",
+    "imagen": "/img/mnu/canastitaMelocoton.jpeg"
+  },
+
+  {
+    "id": "15",
+    "nombre": "Tartaletas de fruta",
+    "precio": 350,
+    "categoria": "Postres",
+    "descripcion": "Rellenas de leche condensada con trozos de frutas encima",
+    "imagen": "/img/mnu/tartaletaFruta.jpeg"
+  },
+
+  {
+    "id": "16",
+    "nombre": "Alfajores",
+    "precio": 350,
+    "categoria": "Postres",
+    "descripcion": "Rellenas de dulce de leche con trocitos de coco encima",
+    "imagen": "/img/mnu/alfajores.jpeg"
+  },
+
+  {
+    "id": "17",
+    "nombre": "Tres Leches (4 personas)",
+    "precio": 15000,
+    "categoria": "Postres",
+    "descripcion": "Tres leches con topping de merengue y trozos de melocotón",
+    "imagen": "/img/mnu/tresLeches.jpeg"
+  },
+
+  {
+    "id": "18",
+    "nombre": "Mousse de maracuyá",
+    "precio": 500,
+    "categoria": "Postres",
+    "descripcion": "Mousse 100% natural de maracuyá",
+    "imagen": "/img/mnu/mousseMaracuya.jpeg"
+  },
+
+  {
+    "id": "19",
+    "nombre": "Mini pies de limón",
+    "precio": 250,
+    "categoria": "Postres",
+    "descripcion": "Bocadillos mini de pie de limón con merengue encima",
+    "imagen": "/img/mnu/miniPieLimon.jpeg"
+  }
+   
+]

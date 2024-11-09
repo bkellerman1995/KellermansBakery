@@ -212,5 +212,9 @@ function mostrarInformacion() {
 // Inicializar la lista al cargar la página
 document.addEventListener("DOMContentLoaded", mostrarInformacion);
 
-///////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 
