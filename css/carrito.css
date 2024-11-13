@@ -21,6 +21,9 @@
     background-color: #8B4513; /* Café oscuro */
     border-color: #8B4513;
     color: #ffffff; /* Color del texto */
+    padding: 15px 30px; /* Aumenta el espacio interior (padding) */
+    font-size: 1.25rem; /* Aumenta el tamaño de la fuente */
+    border-radius: 8px; /* Puedes ajustar el borde redondeado si lo deseas */
   }
   
   .btn-primary:hover {
@@ -28,7 +31,6 @@
     border-color: #A0522D;
   }
   
-
 .number-input button {
     -webkit-appearance: none;
     background-color: transparent;
@@ -137,4 +139,7 @@
 a , p, .text-primarycarrito{
 
     color:black;
+}
+.bg-primarycarrito{
+    background-color:#8B4513
 }
