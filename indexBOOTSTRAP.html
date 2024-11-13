@@ -11,10 +11,9 @@
     <!--Adaptar la página a dispositivos móviles-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Referencia archivoa externos css-->
+    <!--Referencia archivos externos css-->
     <link href="/css/estilo-principal.css" rel="stylesheet">
-    <link href="/css/estilo-flexbox.css" rel="stylesheet">
-    <link href="/css/estilo-grid.css" rel="stylesheet">
+    
 
     <!--Referencia bootstrap local-->
     <!--<link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">-->
@@ -39,28 +38,40 @@
 
     <!--Encabezado de la página-->
     <header>
-
-        <!--Logo-->
-
-        <div class="contenedorLogo">
-            <a href="/index.html">
-                <img src="./img/logo.png" width="225" />
-            </a>
-        </div>
-
-
-
-        <!--navBar-->
-        <nav>
-            <ul> <!--Para estilizar el nav (elementos)-->
-                  <li><a href="index.html">INICIO</a></li>
-                <li><a href="Nosotros.html">NOSOTROS</a></li>
-                <li><a href="mnu.html">MENÚ</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="Contacto.html">CONTACTO</a></li>
-                <li><a href="FAQs.html">FAQs</a></li>
-                <li><a href="AcercaDe.html">ACERCA DE</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <a class="navbar-brand contenedorLogo" href="index.html"> <img src="./img/logo.png" width="225" alt=""> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="index.html">INICIO<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="Nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="mnuBOOTSTRAP.html">MENÚ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="blog.html">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="Contacto.html">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="AcercaDe.html">ACERCA DE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">CARRITO</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -110,14 +121,14 @@
             <div class="contenedorComida">
                 <!--Titulo tipo Comida-->
 
-                <a class="linksComidas" href="/mnuPlatillos.html">
+                <a class="linksComidas" href="/mnu.html">
                     <h4> Platillos</h4>
                 </a>
 
                 <p>Ricos platillos caribeños. Para eventos o consumo general.
                     <br>Nuestro plato estrella: Rice and Beans con pollo.
                 </p>
-                <a class="linksComidas" href="/mnuPlatillos.html">
+                <a class="linksComidas" href="/mnu.html">
                     <img src="./img/principal/riceAndBeans.jpeg">
                 </a>
             </div>
@@ -158,6 +169,10 @@
 
         © 2024, Caribbean Culinary Delights. Todos los derechos reservados.
     </footer>
+
+    
+
+
 </body>
 
 </html>
