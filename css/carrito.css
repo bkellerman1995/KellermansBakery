@@ -17,6 +17,17 @@
     -webkit-appearance: none;
 }
 
+.btn-primary {
+    background-color: #8B4513; /* Cambia este color al que prefieras */
+    border-color: #8B4513; /* Cambia este color para que coincida */
+    color: #8B4513; /* Cambia el color del texto si lo deseas */
+  }
+  
+  .btn-primary:hover {
+    background-color: #8B4513; /* Color cuando el botón esté en hover */
+    border-color: #8B4513;
+  }
+
 .number-input button {
     -webkit-appearance: none;
     background-color: transparent;
@@ -119,5 +130,5 @@
 
 .shopping-cart .def-number-input.number-input button.plus:before,
 .shopping-cart .def-number-input.number-input button.plus:after {
-    background-color: #4285f4;
+    background-color: #8B4513;
 }
