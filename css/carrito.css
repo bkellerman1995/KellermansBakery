@@ -18,15 +18,16 @@
 }
 
 .btn-primary {
-    background-color: #8B4513; /* Cambia este color al que prefieras */
-    border-color: #8B4513; /* Cambia este color para que coincida */
-    color: #8B4513; /* Cambia el color del texto si lo deseas */
+    background-color: #8B4513; /* Café oscuro */
+    border-color: #8B4513;
+    color: #ffffff; /* Color del texto */
   }
   
   .btn-primary:hover {
-    background-color: #8B4513; /* Color cuando el botón esté en hover */
-    border-color: #8B4513;
+    background-color: #A0522D; /* Café más claro para el hover */
+    border-color: #A0522D;
   }
+  
 
 .number-input button {
     -webkit-appearance: none;
@@ -131,4 +132,9 @@
 .shopping-cart .def-number-input.number-input button.plus:before,
 .shopping-cart .def-number-input.number-input button.plus:after {
     background-color: #8B4513;
+}
+
+a , p, .text-primarycarrito{
+
+    color:black;
 }
