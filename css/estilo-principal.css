@@ -38,8 +38,6 @@ body {}
 /*Estilizado para el encabezado de la página (color de fondo, etc)*/
 header {
 
-    display: flex;
-
     background: url("..//img/principal/Dried-Cranberry-Arroz-con-Pollo-Image.jpg");
     padding: 20px;
     justify-content: space-between;
@@ -142,6 +140,12 @@ nav ul li:hover {
 }
 
 nav ul li a {
+    /*Aplicar el color al texto de los elementos*/
+    color: #fff;
+    text-decoration: solid;
+}
+
+nav {
     /*Aplicar el color al texto de los elementos*/
     color: #fff;
     text-decoration: solid;
