@@ -57,7 +57,7 @@ fetch('../json/productos.json')
                                 
                    
                     <div class="card mb-4" style= "text-align: center ; border-radius:10%; 
-                    background-color: #f5f5dc; animation: animacionFadeIn ease 2s; border-style: none">
+                    background-color: #f5f5dc; animation: animacionFadeIn ease 2s; border-style: none; position: relative">
                                     
                                 <div class="card-body" style = "background-color: #c6a664;
                                 border-radius:10%; animation: animacionFadeIn ease 2s;">
@@ -65,12 +65,25 @@ fetch('../json/productos.json')
                                     <h5 class="card-title">${producto.nombre}</h5>
                                         
                                         <img class = "card-img-top" style= "width:200px;
-                                        height: 200px; background-size:cover;border-radius: 10%"
+                                        height: 200px; background-size:cover;border-radius: 10%;"
                                         src= ${producto.imagen} alt="imagen de comida" />
                                         
                                         <p class="card-text">${producto.descripcion}</p>
                                         
                                         <p class="card-text">Precio: &#8353 ${producto.precio} c/u</p>
+                                        <br>
+
+                                                                    <div class="def-number-input number-input safari_only"
+                                                                    style= "position: relative; left: 50%;
+                                                                    transform: translate(-50%, -50%);
+                                                                        border: 1px solid #ced4da; background-color: #8B4513;color: white;width: 10rem;border-radius: .25rem;">
+                              <button data-mdb-button-init onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                class="minus"></button>
+                              <input class="quantity fw-bold bg-body-tertiary text-body" min="0" name="quantity" value="1"
+                                type="number">
+                              <button data-mdb-button-init onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                class="plus"></button>
+                            </div>
 
                                         <button class="btn btn-success" onclick="addToCart('${producto.nombre}')">Agregar al carrito</button>
                 
@@ -84,6 +97,11 @@ fetch('../json/productos.json')
                 });
             }
         };
+
+        //Función para cerrar el modal 
+
+        window.cerrarModal = function () {
+        }
 
         // Función para agregar al carrito
         window.addToCart = function (productName) {
@@ -107,8 +125,8 @@ fetch('../json/productos.json')
                             <img src = ${producto.imagen} alt="imagen de comida" 
                             "card-img-top" style= "width:200px;
                             height: 200px; background-size:cover;border-radius: 10%;
-                            margin-right: 50%;"/>
-                            <p><strong>Precio:</strong> &#8353 ${producto.precio}</p>
+                            margin-left: 30%;"/>
+                            <p style = "text-align: center;"><strong>Precio:</strong> &#8353 ${producto.precio}</p>
                             <p><strong>Descripción:</strong> ${producto.descripcion}</p>
                             <p><strong>Categoría:</strong> ${producto.categoria}</p>
                         `;
@@ -120,6 +138,8 @@ fetch('../json/productos.json')
         if (categorias.includes('Categoria 1')) {
             showProducts('Categoria 1');
         }
+
+
     })
     .catch(error => {
         console.error('Error al cargar productos:', error);
