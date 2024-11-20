@@ -12,18 +12,18 @@ function displayCart() {
 
     //Borrar el contenido de los productos (por defecto)
     container.innerHTML = '<h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Mi pedido</h3><hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>';
-    
+
     productHTML = '';
 
     container = document.querySelector('.col-lg-6.px-5.py-4');
 
     // Chequear si hay productos
     if (products.length === 0) {
-        container.insertAdjacentHTML ('beforeend','<p>No hay productos en el carro.</p>');
+        container.insertAdjacentHTML('beforeend', '<p>No hay productos en el carro.</p>');
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Subtotal:</p><p class="fw-bold" <span id="subtotal">₡0</p></div>');
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Descuento:</p><p class="fw-bold">₡0</p></div>');
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between p-2 mb-2 bg-primarycarrito"><h5 class="fw-bold mb-0" style="color:white">Total:</h5><h5 class="fw-bold mb-0" style="color:white" <span id="total">₡0</h5> </div>');
-    
+
         return;
     }
 
@@ -163,12 +163,68 @@ function deleteProduct(productId) {
     products = products.filter(item => item.id !== productId);
 
     // Save the updated cart back to local storage
-    localStorage.setItem('cart', JSON.stringify(products));
+    localStorage.setItem('typeText', JSON.stringify(products));
 
     // Re-render the cart
     displayCart();
 }
 
-//Eventos de carga inicial
+//Función para verificar el número de tarjeta por medio de BInlist API
+//Expresion regular para validar los 16 dígitos
+const cardInput = document.getElementById('typeText');
+
+const isValidCard = /^\d{16}$/.test(cardInput);
+
+const cardIcon = document.getElementById('cardIcon'); //contenedor del icono de la tarjeta
+
+cardInput.addEventListener('input', async function () {
+   
+    cardIcon.innerHTML = "";
+    $('#typeText').css("backgroundColor", "white");
+    const value = cardInput.value.trim();
+
+    // Verificar que al menos 6 digitos son ingresados
+
+    if (value.length >= 6) {
+        //extrar el BIN (primeros 6 dígitos)
+        const bin = value.substring(0.6);
+
+        try {
+            // Obtener datos de las tarjeta mediante BinList API
+            const response = await fetch(`http://localhost:3001/handyapi/${bin}`);
+            // const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lookup.binlist.net/${bin}`);
+            if (response.ok) {
+                const data = await response.json();
+
+                //Actualizar el icono y el tipo de tarjeta
+                cardIcon.innerHTML = ""; //Limpiar el ícono anterior
+
+                if (data.Scheme === "VISA") {
+                    cardIcon.innerHTML = '<img src="./img/carrito/visa.png" alt="Visa" style="width: 30px;">';
+                    $('#typeText').css("backgroundColor", "#D7FFE4");
+                } else if (data.Scheme === "MASTERCARD") {
+                    cardIcon.innerHTML = '<img src="./img/carrito/mastercard.svg" alt="Mastercard" style="width: 30px;">';
+                    $('#typeText').css("backgroundColor", "#D7FFE4");
+                } else {
+                    cardIcon.innerHTML = '<span>Número de tarjeta incorrecto</span>';
+                    $('#typeText').css("backgroundColor", "pink");
+                }
+
+
+            } else {
+                console.log("El tipo de tarjeta no pudo ser determinado. La búsqueda de BIN falló.");
+                $('#typeText').css("backgroundColor", "pink");
+            }
+        } catch (error) {
+            console.error("Error fetching card data:", error);
+            // cardResult.textContent = "An error occurred while validating the card.";
+            $('#typeText').css("backgroundColor", "red");
+        }
+    }
+
+
+});
+
+//Evento de carga inicial
 
 document.addEventListener('DOMContentLoaded', displayCart);
