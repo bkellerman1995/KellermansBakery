@@ -20,6 +20,11 @@ vertical del content/main de la página web */
     }
 }
 
+@keyframes beat {
+    0%, 50%, 100% { transform: scale(1, 1); }
+    30%, 80% { transform: scale(0.92, 0.95); }
+  }
+
 
 /* Estilizado general para que todo el contenido sea responsivo*/
 * {
@@ -31,9 +36,6 @@ vertical del content/main de la página web */
 
 }
 
-/*Estilizado del cuerpo*/
-
-body {}
 
 /*Estilizado para el encabezado de la página (color de fondo, etc)*/
 header {
@@ -386,6 +388,11 @@ aside p {
 
 }
 
+.fa-shopping-cart.animate {
+    animation: 2.0s ease 0s infinite beat;
+    color: rgb(238, 31, 31);
+}
+
 #btnSubscribirse{
 
     width: 50%;
@@ -422,6 +429,13 @@ aside p {
     font-size: 150%;
     font-weight: bold;
 
+}
+
+#botonMasMenu::before,
+#botonMasMenu::after,
+#botonMenosMenu::before,
+#botonMenosMenu::after {
+    background-color: white;
 }
 
 #email {
