@@ -62,11 +62,11 @@ header {
 
 }
 
-h1 {
+/* h1 {
     text-align: center;
     background-color: #f5f5dc;
     margin-top: 1%;
-}
+} */
 
 #inicioTexto {
     padding-left: 2%;
@@ -464,4 +464,53 @@ footer {
   
   #btnTop:hover {
     background-color: #555;
+  }
+
+  /* Iconos Redes */
+  .social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    margin-left: 20px;
+    z-index: 1;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social-sidebar a {
+    margin: 10px 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .social-sidebar a:hover {
+    transform: scale(1.1);
+  }
+
+  /* Tamaño de inconos */
+  .social-sidebar a i {
+    font-size: 29px;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .whatsapp {
+    background-color: #25d366;
+  }
+  
+  .phone {
+    background-color: #4CAF50;
   }
