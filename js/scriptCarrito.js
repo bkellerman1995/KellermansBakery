@@ -161,13 +161,26 @@ function deleteProduct(productId) {
 
     // Filtrar el producto
     products = products.filter(item => item.id !== productId);
+    
 
     // Save the updated cart back to local storage
-    localStorage.setItem('typeText', JSON.stringify(products));
+    localStorage.setItem('cart', JSON.stringify(products));
 
     // Re-render the cart
     displayCart();
 }
+
+// Delegación de eventos para los clics de botones de borrar
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete-btn')) {
+        const productElement = event.target.closest('.product');
+        const productId = productElement.getAttribute('data-id');
+
+        // Call deleteProduct with the product ID
+        deleteProduct(productId);
+    }
+});
+
 
 //Función para verificar el número de tarjeta por medio de BInlist API
 //Expresion regular para validar los 16 dígitos
