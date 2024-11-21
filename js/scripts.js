@@ -212,6 +212,29 @@ function mostrarInformacion() {
 // Inicializar la lista al cargar la página
 document.addEventListener("DOMContentLoaded", mostrarInformacion);
 
+//////////////////////////////////////////////////////////////////////////////
+///////////////CODIGO BOTÓN PARA SUBIR AL PRINCIPIO DE PÁGINA/////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+// Buscar el botón
+let buttonTop = document.getElementById("btnTop");
+
+// Cuando el usuario baja 20px del header, muestra el botón
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonTop.style.display = "block";
+  } else {
+    buttonTop.style.display = "none";
+  }
+}
+
+// Cuando el usuario hace clic en el botón, se desplaza hasta la parte superior del documento.
+function topFunction() {
+  document.body.scrollTop = 0; // Para Safari
+  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+}
 
 
 

@@ -64,11 +64,11 @@ header {
 
 }
 
-h1 {
+/* h1 {
     text-align: center;
     background-color: #f5f5dc;
     margin-top: 1%;
-}
+} */
 
 #inicioTexto {
     padding-left: 2%;
@@ -139,6 +139,8 @@ nav ul {
 
 nav ul li:hover {
     background-color: rgb(67, 34, 34);
+    border: transparent;
+    border-radius: 10%;
 }
 
 nav ul li a {
@@ -204,20 +206,20 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
     }
 
 
-    .contenedorLogo {
+    /*.contenedorLogo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        /* Ensures horizontal centering */
+        //Ensures horizontal centering 
     }
 
     .contenedorLogo img {
         max-width: 150px;
-        /* Smaller logo size for mobile */
+        //Smaller logo size for mobile 
         height: auto;
     }
-
+    */
     nav ul {
         /*Acomodar los elementos del navbar 
         de forma horizontal (row) */
@@ -235,20 +237,21 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
 tenga un máximo de 768px (pantallas móviles)*/
 @media (max-width:720px) {
 
+    /*
     .contenedorLogo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        /* Ensures horizontal centering */
+        //Ensures horizontal centering
     }
 
     .contenedorLogo img {
         max-width: 150px;
-        /* Smaller logo size for mobile */
+        //Smaller logo size for mobile
         height: auto;
     }
-
+    */
     nav ul {
         /*Acomodar los elementos del navbar 
         de forma horizontal (row) */
@@ -442,7 +445,12 @@ aside p {
     border-radius: 5px;
 }
 
-
+.contenedorFacebook a img {
+    width: 5%;
+    height: 5%;
+    padding-bottom: 2%;
+    align-self: center;
+}
 
 footer {
     background-color: #8B4513;
@@ -454,3 +462,72 @@ footer {
     color: white;
     position: static;
 }
+
+#btnTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #btnTop:hover {
+    background-color: #555;
+  }
+
+  /* Iconos Redes */
+  .social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    margin-left: 20px;
+    z-index: 1;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social-sidebar a {
+    margin: 10px 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .social-sidebar a:hover {
+    transform: scale(1.1);
+  }
+
+  /* Tamaño de inconos */
+  .social-sidebar a i {
+    font-size: 29px;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .whatsapp {
+    background-color: #25d366;
+  }
+  
+  .phone {
+    background-color: #4CAF50;
+  }
