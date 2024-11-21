@@ -139,6 +139,8 @@ nav ul {
 
 nav ul li:hover {
     background-color: rgb(67, 34, 34);
+    border: transparent;
+    border-radius: 10%;
 }
 
 nav ul li a {
@@ -204,20 +206,20 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
     }
 
 
-    .contenedorLogo {
+    /*.contenedorLogo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        /* Ensures horizontal centering */
+        //Ensures horizontal centering 
     }
 
     .contenedorLogo img {
         max-width: 150px;
-        /* Smaller logo size for mobile */
+        //Smaller logo size for mobile 
         height: auto;
     }
-
+    */
     nav ul {
         /*Acomodar los elementos del navbar 
         de forma horizontal (row) */
@@ -235,20 +237,21 @@ tenga un máximo de 768px (pantallas más pequeñas)*/
 tenga un máximo de 768px (pantallas móviles)*/
 @media (max-width:720px) {
 
+    /*
     .contenedorLogo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        /* Ensures horizontal centering */
+        //Ensures horizontal centering
     }
 
     .contenedorLogo img {
         max-width: 150px;
-        /* Smaller logo size for mobile */
+        //Smaller logo size for mobile
         height: auto;
     }
-
+    */
     nav ul {
         /*Acomodar los elementos del navbar 
         de forma horizontal (row) */
