@@ -2,7 +2,10 @@
 // Declarar e inicializar el contenedor y el subcontenedor donde los productos serán insertados
 let container = '';
 let productHTML = '';
+let envio = false;
 
+//Configurar el input de tipo date con el minimo de hoy.
+typeExp.min = new Date().toISOString().split("T")[0];
 
 // Función para mostrar el carrito de compras
 function displayCart() {
@@ -19,12 +22,51 @@ function displayCart() {
 
     // Chequear si hay productos
     if (products.length === 0) {
+
+        //Deshabilitar los inputs de la sección de tarjeta
+        document.getElementById('typeText').value = '';
+        $('#typeText').css("backgroundColor", "#EAECEF");
+        cardIcon.innerHTML = '<img src =""/>';
+        
+        document.getElementById('typeText').disabled = true;
+
+        document.getElementById('typeName').value = '';
+        document.getElementById('typeName').disabled = true;
+
+        document.getElementById('typeCVV').value = '';
+        document.getElementById('typeCVV').disabled = true;
+
+
+        $("input[type=date]").val("");
+
+        document.getElementById('lblEnvio').style.visibility = "hidden";
+        document.getElementById('flexRadioDefault1').style.visibility = "hidden";
+        document.getElementById('tipoEnvio1').style.visibility = "hidden";
+        document.getElementById('flexRadioDefault2').style.visibility = "hidden";
+        document.getElementById('tipoEnvio2').style.visibility = "hidden";
+        document.getElementById('btnComprar').style.visibility = "hidden";
+
+
         container.insertAdjacentHTML('beforeend', '<p>No hay productos en el carro.</p>');
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Subtotal:</p><p class="fw-bold" <span id="subtotal">₡0</p></div>');
-        container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Descuento:</p><p class="fw-bold">₡0</p></div>');
+        container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">IVA (13%):</p><p class="fw-bold"><span id="iva">₡0</p></div>');
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between p-2 mb-2 bg-primarycarrito"><h5 class="fw-bold mb-0" style="color:white">Total:</h5><h5 class="fw-bold mb-0" style="color:white" <span id="total">₡0</h5> </div>');
 
         return;
+    }
+
+    else {
+
+        //Habilitar los inputs de la sección de tarjeta
+        document.getElementById('typeText').disabled = false;
+        document.getElementById('typeName').disabled = false;
+        document.getElementById('typeExp').disabled = false;
+        document.getElementById('typeCVV').disabled = false;
+        document.getElementById('lblEnvio').style.visibility = "visible";
+        document.getElementById('flexRadioDefault1').style.visibility = "visible";
+        document.getElementById('tipoEnvio1').style.visibility = "visible";
+        document.getElementById('flexRadioDefault2').style.visibility = "visible";
+        document.getElementById('btnComprar').style.visibility = "visible";
     }
 
     // Iterar cada producto y crear el div
@@ -40,7 +82,7 @@ function displayCart() {
                 <h5 class="text-primarycarrito">${item.nombre}</h5>
                 <div class="d-flex align-items-center">
                     <p class="fw-bold mb-0 me-5 pe-3"> &#8353 ${item.subtotal}</p>
-                    <div class="def-number-input number-input safari_only">
+                    <div class="def-number-input number-input safari_only" style="position:absolute;margin-left: 15%">
                         <button data-mdb-button-init
                             onclick="updateQuantity('${item.id}', -1)"
                             class="minus"></button>
@@ -65,11 +107,11 @@ function displayCart() {
     });
 
     container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Subtotal:</p><p class="fw-bold" <span id="subtotal">₡0</p></div>');
-    container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Descuento:</p><p class="fw-bold">₡0</p></div>');
+    container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">IVA (13%):</p><p class="fw-bold"><span id="iva">₡0</p></div>');
     container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between p-2 mb-2 bg-primarycarrito"><h5 class="fw-bold mb-0" style="color:white">Total:</h5><h5 class="fw-bold mb-0" style="color:white" <span id="total">₡0</h5> </div>');
 
     //Recargar el subtotal y el total
-    updateTotals();
+    updateTotals(false);
 
 };
 
@@ -105,23 +147,34 @@ function updateQuantity(productId, change) {
 };
 
 //Función para calcular el subtotal y el total de la compra
-function updateTotals() {
+function updateTotals(envioDomicilio) {
+
 
     // Cargar el carrito de compras almacenado en localStorage
     const products = JSON.parse(localStorage.getItem('cart')) || [];
     let subtotal = 0;
+
 
     // Calcular el subtotal
     products.forEach(item => {
         subtotal += item.precio * item.cantidad;
     });
 
+    //Chequear si el envio es a domicilio
+
+    if (envioDomicilio === true) {
+        subtotal += 500;
+    }
+
     //Agregar el IVA del 13%
     const iva = subtotal * 0.13; // Example: 13% tax
     const total = subtotal + iva;
 
+
+
     //Actualizar el DOM
     document.getElementById('subtotal').textContent = `₡${subtotal.toFixed(2)}`;
+    document.getElementById('iva').textContent = `₡${iva.toFixed(2)}`;
     document.getElementById('total').textContent = `₡${total.toFixed(2)}`;
 
 
@@ -151,7 +204,7 @@ document.addEventListener('change', (event) => {
         localStorage.setItem('cart', JSON.stringify(products));
 
         // Recalcular los totales
-        updateTotals();
+        updateTotals(false);
     }
 });
 
@@ -161,12 +214,12 @@ function deleteProduct(productId) {
 
     // Filtrar el producto
     products = products.filter(item => item.id !== productId);
-    
 
-    // Save the updated cart back to local storage
+
+    // Guardar el carrito actualizado en local storage
     localStorage.setItem('cart', JSON.stringify(products));
 
-    // Re-render the cart
+    // Re-cargar el carro
     displayCart();
 }
 
@@ -181,17 +234,16 @@ document.addEventListener('click', (event) => {
     }
 });
 
-
 //Función para verificar el número de tarjeta por medio de BInlist API
-//Expresion regular para validar los 16 dígitos
+
 const cardInput = document.getElementById('typeText');
 
-const isValidCard = /^\d{16}$/.test(cardInput);
+//contenedor del icono de la tarjeta
+const cardIcon = document.getElementById('cardIcon');
 
-const cardIcon = document.getElementById('cardIcon'); //contenedor del icono de la tarjeta
 
 cardInput.addEventListener('input', async function () {
-   
+
     cardIcon.innerHTML = "";
     $('#typeText').css("backgroundColor", "white");
     const value = cardInput.value.trim();
@@ -204,8 +256,7 @@ cardInput.addEventListener('input', async function () {
 
         try {
             // Obtener datos de las tarjeta mediante BinList API
-            const response = await fetch(`http://localhost:3001/handyapi/${bin}`);
-            // const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lookup.binlist.net/${bin}`);
+            const response = await fetch(`https://data.handyapi.com/bin/${bin}`);
             if (response.ok) {
                 const data = await response.json();
 
@@ -230,13 +281,204 @@ cardInput.addEventListener('input', async function () {
             }
         } catch (error) {
             console.error("Error fetching card data:", error);
-            // cardResult.textContent = "An error occurred while validating the card.";
-            $('#typeText').css("backgroundColor", "red");
+            cardIcon.innerHTML = '<span>Error al verificar la tarjeta: </span>';
+            $('#typeText').css("backgroundColor", "pink");
         }
     }
 
 
 });
+
+//Actualizar el subtotal si el radioButton de Envio a Domicilio está seleccionado
+document.getElementById('flexRadioDefault1').addEventListener('change', function () {
+    if (this.checked) {
+        envio = true;
+        updateTotals(true);
+
+    } else {
+        updateTotals(false);
+        envio = true;
+    }
+});
+
+//Actualizar el subtotal si el radioButton de recoger en tienda está seleccionado
+document.getElementById('flexRadioDefault2').addEventListener('change', function () {
+    if (this.checked) {
+        updateTotals(false);
+        envio = false;
+
+    } else {
+        updateTotals(true);
+        envio = true;
+    }
+});
+
+//Función para verificar los datos ingresados para la tarjeta
+function ingresarDatosTarjeta() {
+
+    //Campos para llenar la tarjeta
+    const cardInput = document.getElementById('typeText').value.trim();
+    const cvvInput = document.getElementById('typeCVV').value.trim();
+    const nombre = document.getElementById('typeName').value.trim();
+    const fechaExpiracion = document.getElementById('typeExp').value;
+
+    //Expresión regular para validar los 16 dígitos
+    const isValidCard = /^\d{16}$/.test(cardInput);
+
+    //Expresión regular para validar los 3 dígitos del CCV
+    const isValidCVV = /^\d{3}$/.test(cvvInput);
+
+    // Validar los campos
+    if (!isValidCard && $('#typeText').css("backgroundColor", "pink")) {
+        alert("Por favor, introduce un número de tarjeta válido (16 dígitos).");
+        return;
+    }
+
+    if (nombre === "") {
+        alert("Por favor, introduce un nombre.");
+        return;
+    }
+
+
+    if (isNaN(new Date(fechaExpiracion))) {
+        alert("Por favor, entra un valor válido de fecha.");
+        return;
+    }
+
+    if (!isValidCVV) {
+        alert("Por favor, introduce un número de CVV válido (3 dígitos).");
+        return;
+    }
+
+    //Desplegar la alerta
+    Swal.fire({ title: "¡Éxito!", text: "Compra exitosa", icon: "success" });
+
+    //generar archivo pdf
+    generatePDF(envio);
+
+    //vaciar el carrito de compras
+    localStorage.setItem('cart', JSON.stringify([]));
+    
+    //Cargar el carrito de nuevo
+    displayCart();
+
+}
+
+// Función para generar un PDF del contenido del carrito
+function generatePDF(envioDomicilio) {
+
+    const nombre = document.getElementById('typeName').value;
+    const products = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Generar la fecha y hora actual en el formato especificado
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Asegurar que el mes tenga dos dígitos
+    const day = String(now.getDate()).padStart(2, '0'); // Asegurar que el día tenga dos dígitos
+    const hours = String(now.getHours()).padStart(2, '0'); // Asegurar que la hora tenga dos dígitos
+    const minutes = String(now.getMinutes()).padStart(2, '0'); // Asegurar que los minutos tengan dos dígitos
+    const seconds = String(now.getSeconds()).padStart(2, '0'); // Asegurar que los segundos tengan dos dígitos
+    const milliseconds = String(now.getMilliseconds()).padStart(3, '0'); // Asegurar que los milisegundos tengan tres dígitos
+
+    const invoiceNumber = `${year}${month}${day}${hours}${minutes}${seconds}${milliseconds}`;
+
+    doc.setFontSize(20);
+    doc.setTextColor(0, 0, 0); // Color negro
+    doc.setFont("arial", "bold"); // Establecer fuente en negrita
+    doc.text("Factura de Compra", 105, 20, null, null, 'center'); // Centrado horizontalmente
+    doc.setTextColor(0, 0, 0); // Color negro
+    doc.setFont("arial", "normal"); // Establecer fuente normal
+    doc.setFontSize(12);
+
+    // Agregar el número de factura
+    doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); // Centrado horizontalmente
+    // Verificar el nombre del cliente y asignar "Contado" si está vacío
+    const customerNameDisplay = nombre.trim() === "" ? "Contado" : nombre;
+
+    doc.text(`Nombre del cliente: ${customerNameDisplay}`, 14, 40); // Posición vertical después del número de factura
+
+    let y = 45; // posición vertical inicial
+    let total = 0;
+    let envio = 500;
+    const iva = 0.13;
+    let subtotal = 0;
+
+
+    // Definir el ancho de la tabla y la altura de las filas
+    const tableWidth = 180;
+    const rowHeight = 10;
+
+    // Cabecera de la tabla
+    doc.setFillColor(139, 69, 19); // Color café
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo de la cabecera
+    doc.setTextColor(255, 255, 255); // Texto blanco
+    doc.text("Producto", 15, y + 7);
+    doc.text("Precio", 80, y + 7);
+    doc.text("Cantidad", 120, y + 7);
+    doc.text("Subtotal", 150, y + 7);
+    doc.setTextColor(0, 0, 0); // Restablecer el color del texto a negro
+    y += rowHeight;
+
+    // Detalles de los productos
+    products.forEach(item => {
+        subtotal += item.precio * item.cantidad;
+        doc.rect(14, y, tableWidth, rowHeight); // Bordes de la fila
+        doc.text(item.nombre, 15, y + 7);
+        doc.text(`₡${item.precio.toFixed(2)}`, 80, y + 7);
+        doc.text(item.cantidad.toString(), 120, y + 7);
+        doc.text(`₡${subtotal.toFixed(2)}`, 150, y + 7);
+        y += rowHeight; // Incremento para la siguiente línea
+
+    });
+
+    // Envío
+    doc.setFillColor(211, 211, 211); // Color gris
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo del envío
+    doc.setTextColor(0, 0, 0); // Texto negro
+
+    //Chequear si el envío es por domicilio o recoger en tienda
+    if (envioDomicilio === true) {
+        doc.text("Envío: a dirección postal", 15, y + 7);
+        doc.text(`₡${envio.toFixed(2)}`, 150, y + 7);
+        subtotal += envio;
+
+    }
+    else {
+        doc.text("Envío: recoger en tienda", 15, y + 7);
+        envio = 0;
+        doc.text(`₡${envio.toFixed(2)}`, 150, y + 7);
+    }
+    y += rowHeight; // Incremento para la siguiente línea
+
+    total += subtotal + (subtotal * iva);
+    // Total
+    doc.setFillColor(211, 211, 211); // Color gris
+    doc.setFont("arial", "bold"); // Establecer fuente en negrita
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo del total
+    doc.setTextColor(0, 0, 0); // Texto negro
+    doc.text("Total (13% IVA incluido):", 15, y + 7);
+    doc.text(`₡${total.toFixed(2)}`, 150, y + 7);
+
+    y += rowHeight; // Incremento para la siguiente línea
+    y += rowHeight; // Incremento para la siguiente línea
+
+    // Medio de pago
+    doc.setFillColor(255, 255, 255); // Color gris
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo del medio de pago
+    doc.setTextColor(0, 0, 0); // Texto negro
+    doc.text("Medio de pago: tarjeta", 15, y + 7);
+
+    // Agregar número de página
+    const pageCount = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i); // Establecer la página actual
+        doc.text(`Página ${i} de ${pageCount}`, 190, 285, null, null, 'right'); // Añadir número de página
+    }
+    doc.save('factura_compra.pdf');
+}
 
 //Evento de carga inicial
 

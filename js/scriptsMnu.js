@@ -159,7 +159,7 @@ fetch('../json/productos.json')
                 //Salvar el carrito actualizado al almacenamiento local
                 localStorage.setItem('cart', JSON.stringify(cart));
 
-                //Desplegar la alarta
+                //Desplegar la alerta
                 Swal.fire('Producto agregado', `${producto.nombre} ha sido agregado al carrito`, 'success');
 
                 //Chequear si el carrito tiene items para animarlo
