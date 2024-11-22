@@ -391,9 +391,10 @@ aside p {
 
 }
 
-.fa-shopping-cart.animate {
+#carrito-animar {
     animation: 2.0s ease 0s infinite beat;
-    color: rgb(238, 31, 31);
+    background-color: red;
+
 }
 
 #btnSubscribirse{

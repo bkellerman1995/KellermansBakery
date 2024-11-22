@@ -102,7 +102,7 @@ fetch('../json/productos.json')
                                         <button class="btn btn-success" onclick="addToCart('${producto.id}')">Agregar al carrito</button>
                 
                                         <button class="btn btn-info" onclick="showDetails('${producto.id}')"
-                                        style = "background-color: #8B4513; color: white; border-style:none" >Mostrar detalles</button>
+                                        style = "background-color: #8B4513; color: white; border-style:none">Mostrar detalles</button>
 
                                     </div>
                                 </div>
@@ -111,10 +111,6 @@ fetch('../json/productos.json')
                 });
             }
         };
-
-        //Función para cerrar el modal 
-        window.cerrarModal = function () {
-        }
 
         // Función para agregar productos al carrito
         window.addToCart = function (id) {
@@ -156,23 +152,23 @@ fetch('../json/productos.json')
                 cart.push(cartItem);
             }
 
-                //Salvar el carrito actualizado al almacenamiento local
-                localStorage.setItem('cart', JSON.stringify(cart));
+            //Salvar el carrito actualizado al almacenamiento local
+            localStorage.setItem('cart', JSON.stringify(cart));
 
-                //Desplegar la alerta
-                Swal.fire('Producto agregado', `${producto.nombre} ha sido agregado al carrito`, 'success');
+            //Desplegar la alerta
+            Swal.fire('Producto agregado', `${producto.nombre} ha sido agregado al carrito`, 'success');
 
-                //Chequear si el carrito tiene items para animarlo
+            //Chequear si el carrito tiene items para animarlo
 
-                animateCartIcon();
-            }
+            animateCartIcon();
+        }
 
-            // Función para mostrar detalles en el modal
-            window.showDetails = function (id) {
-                const producto = data.find(item => item.id === id);
-                if (producto) {
-                    const modalContent = document.getElementById("modalContent");
-                    modalContent.innerHTML = `
+        // Función para mostrar detalles en el modal
+        window.showDetails = function (id) {
+            const producto = data.find(item => item.id === id);
+            if (producto) {
+                const modalContent = document.getElementById("modalContent");
+                modalContent.innerHTML = `
                             <p><strong>Código:</strong> ${producto.id}</p>
                             <p><strong>Nombre:</strong> ${producto.nombre}</p>
                             <img src = ${producto.imagen} alt="imagen de comida" 
@@ -182,18 +178,24 @@ fetch('../json/productos.json')
                             <p style = "text-align: center;"><strong>Precio:</strong> &#8353 ${producto.precio}</p>
                             <p><strong>Descripción:</strong> ${producto.descripcion}</p>
                             <p><strong>Categoría:</strong> ${producto.categoria}</p>
+                            <p><strong>Stock:</strong> Disponible en físico y en línea</p>
+                            <p><strong>Tiempo de entrega:</strong> Mismo día</p>
+                            <p><strong>Gastos de envío:</strong> &#8353 500 en cualquier orden a entrega a domicilio</p>
+                            <p><strong>Envío:</strong> a dirección postal o recogida en tienda</p>
+
+
                         `;
-                    $('#productModal').modal('show');  // Mostrar el modal
-                }
+                $('#productModal').modal('show');  // Mostrar el modal
             }
+        }
 
-            // Mostrar productos de "Categoria 1" al cargar la página, si existe
-            if (categorias.includes('Categoria 1')) {
-                showProducts('Categoria 1');
-            };
+        // Mostrar productos de "Categoria 1" al cargar la página, si existe
+        if (categorias.includes('Categoria 1')) {
+            showProducts('Categoria 1');
+        };
 
 
-        })
+    })
     .catch(error => {
         console.error('Error al cargar productos:', error);
         document.getElementById("categories").innerHTML = '<p class="col-12 text-center">No hay categorías disponibles</p>';
@@ -227,15 +229,17 @@ function hasCartItems() {
 
 // Función para animar el carrito de compras
 function animateCartIcon() {
-    const cartIcon = document.querySelector('.fa.fa-shopping-cart');
+    // const cartIcon = document.querySelector('.fa.fa-shopping-cart');
+    const carrito = document.querySelector('#carrito');
 
     if (hasCartItems() > 0) {
-        cartIcon.classList.add('animate');
+        carrito.id = 'carrito-animar'
     }
     else {
-        cartIcon.classList.remove('animate');
+        carrito.id = 'carrito'
     }
 }
+
 
 //Llamado de la función siempre que el carro se actualice
 document.addEventListener('DOMContentLoaded', () => {

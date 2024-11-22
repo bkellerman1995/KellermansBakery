@@ -36,40 +36,54 @@
     <!--Encabezado de la página-->
     <header>
 
-        <!--Logo-->
-
-        <div class="contenedorLogo">
-            <a href="/index.html">
-                <img src="./img/logo.png" width="225" />
-            </a>
-        </div>
-
-
-
         <!--navBar-->
-        <nav>
-            <ul> <!--Para estilizar el nav (elementos)-->
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="Nosotros.html">NOSOTROS</a></li>
-                <li><a href="mnu.html">MENÚ</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="Contacto.html">CONTACTO</a></li>
-                <li><a href="FAQs.html">FAQs</a></li>
-                <li><a href="AcercaDe.html">ACERCA DE</a></li>
-                <li><a href="Carrito.html">
-                    <i class="fa fa-shopping-cart" 
-                    style="font-size:30px;"></i>
-                </a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand contenedorLogo" href="indexBOOTSTRAP.html"> <img src="./img/logo.png" width="225"
+                        alt=""> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-5 h4 bg-dark rounded" style="--bs-bg-opacity: .5;">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="indexBOOTSTRAP.html">INICIO<span
+                                    class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="Nosotros.html">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="mnuBOOTSTRAP.html">MENÚ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="blog.html">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="Contacto.html">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="FAQs.html">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="AcercaDe.html">ACERCA DE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" id="carrito" href="Carrito.html">CARRITO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    
+
     <main>
 
         <!--Contenedor del encabezado de texto (banner)-->
-        <div class="encabezadoTexto">
-            <p>tenemos una amplia variedad de opciones a escoger.
-                <br>ventas al por mayor y al detalle.
+        <div class="encabezadoTexto pt-3 pb-1">
+            <p>tenemos una amplia variedad de opciones a escoger
+                <br>ventas al por mayor y al detalle
             </p>
         </div>
 
@@ -94,18 +108,18 @@
                 <br>&#9733 Opciones perfectas para cualquier ocasión &#9733
                 <br>&#9733 Recetas tradicionales llenas de historia y pasión &#9733
 
-                <!--Contenedor videoMenu-->
-            <div class="videoMenu">
-                <video loop src="video/mnu/videoMnu.mp4" width="400" height="300" title="Menú" playsinline muted
+            <!--Contenedor videoMenu-->
+            <!-- <div class="videoMenu">
+                <video loop src="video/mnu/videoMnu.mp4" width="1000" height="300" title="Menú" playsinline muted
                     autoplay></video>
 
-            </div>
+            </div> -->
             </p>
 
 
             <!--Contenedor para las categorías-->
             <div class="container">
-                <h1 class="my-4">Categorías</h1>
+                <h1 class="my-4" style="text-align: center">Categorías</h1>
                 <div id="categories" class="row"></div>
 
                 <h2 class="my-4">Productos</h2>
@@ -114,21 +128,23 @@
             </div>
 
             <!-- Modal para detalles del producto -->
-            <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel"
+            <div class="modal fade" data-bs-backdrop="static" id="productModal" tabindex="-1" aria-labelledby="productModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
-                            <div class="modal-header">
+                    <div class="modal-content" id="modal">
+                        <div class="modal-header">
                             <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                             </button>
                         </div>
                         <div class="modal-body" id="modalContent">
                             <!-- Detalles del producto se cargarán aquí -->
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cerrar</button>
+                        <div class="modal-footer" id="modalFooter">
+                            <a href="Contacto.html" target="_blank">
+                                <button type="button" class="btn btn-primary" style="background-color:#8B4513">Contacto</button>
+                            </a>
+                            <button type="button" id ="cerrar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
@@ -143,33 +159,19 @@
     </main>
 
     <footer>
-        <div class="contenedorRedesSociales"
-        style="display: grid; 
-        grid-template-columns: 1fr; 
-        grid-template-rows: auto auto; 
-        align-items: center; 
-        justify-items: center; 
-        gap: 10px;">
-            <p>Nuestras redes sociales</p>
+        <div class="contenedorRedesSociales d-flex align-items-center flex-column">
+            <h5>Nuestras redes sociales</h5>
 
             <!--Contenedor de Facebook-->
-            <div class="contenedorFacebook"
-            style="display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;">
+            <div class="contenedorFacebook text-center">
                 <a class=linkFacebook target="_blank" href="https://www.facebook.com/profile.php?id=100083469393808">
-                    <img src="img/principal/fbLogo.png" 
-                    style="    width: 5%;
-                    height: 5%;
-                    padding-bottom: 2%;
-                    margin-right: 20%;"/>
+                    <img class="w-10" src="img/principal/fbLogo.png" />
                 </a>
             </div>
-
+            <h5>© 2024, Caribbean Culinary Delights. Todos los derechos reservados.</h5>
         </div>
 
-        © 2024, Caribbean Culinary Delights. Todos los derechos reservados.
+
     </footer>
 
     <!-- Scripts de Bootstrap, jQuery y JavaScript-->
