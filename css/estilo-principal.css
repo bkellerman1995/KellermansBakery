@@ -543,6 +543,7 @@ footer {
     text-align: center; /* Center-align each item */
 }
 
+
 /* Estilo general del accordion*/
 .accordion-button {
     font-size: 1.1rem; /* Tamaño de texto de la pregunta */
@@ -581,6 +582,8 @@ footer {
     }
 }
 
+/*background color de la pagina*/
+
 .FAQSBOOSTRAP{
 
 background-color:#f5f5dc; ;
@@ -604,4 +607,19 @@ background-color:#f5f5dc; ;
     background-color: #f5f5dc;
     color: #000; /* Ajusta el color del texto */
 }
+
+
+.main-bg {
+    background-color: #f5f5dc;
+}
+.contactoBOOSTRAP{
+    background-color: #f5f5dc;
+}
+
+.CardContacto{
+    background-color: #f5f5dc;
+
+}
+    
+
 
