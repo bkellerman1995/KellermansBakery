@@ -453,7 +453,7 @@ aside p {
     align-self: center;
 }
 
-footer {
+/*footer {
     background-color: #8B4513;
     display: block;
     padding: 10px;
@@ -462,6 +462,44 @@ footer {
     width: 100%;
     color: white;
     position: static;
+}*/
+
+footer {
+    background-color: #8B4513; /* Color de fondo opcional */
+    color: white; /* Color de texto */
+    padding: 20px; /* Ajuste de padding */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.footer-info {
+    max-width: 50%; /* Limita el ancho de la información */
+    width: 100%;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.footer-social a {
+    display: block; /* Para que los enlaces estén en líneas separadas */
+    margin: 5px 0; /* Espaciado entre enlaces */
+    color: white;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    text-decoration: underline; /* Efecto al pasar el mouse */
+}
+
+#map {
+    width: 50%; /* Asigna el 50% del ancho al mapa */
+    height: 400px; /* Altura fija */
+    border: 2px solid #ccc; /* Borde alrededor del mapa */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para el mapa */
+    margin-left: 20px; /* Espaciado a la izquierda del mapa */
 }
 
 #btnTop {
