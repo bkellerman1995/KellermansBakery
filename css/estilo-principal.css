@@ -591,7 +591,11 @@ footer {
 background-color:#f5f5dc; ;
 }
 
-.accordion-button collapsed{
-    background-color:#f5f5dc; 
-
+#containeraccordion .accordion-item {
+    background-color: #f5f5dc;
 }
+
+#containeraccordion .accordion-body {
+    background-color: #f5f5dc;
+}
+
