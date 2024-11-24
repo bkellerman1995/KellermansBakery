@@ -1,173 +1,780 @@
 [
   {
-    "id": "1",
+    "id": "boc1",
     "nombre": "Volovanes",
     "precio": 500,
     "categoria": "Bocadillos",
     "descripcion": "Rellenos con queso crema y especias",
-    "imagen": "../img/mnu/volovanes.jpeg"
-  },
+    "imagen": "../img/mnu/volovanes.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp",
+        "nombreCliente": "Andrea Chávez",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Muy ricos los volovanes."
+      },
+      {
+        "imgCliente": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(15).webp",
+        "nombreCliente": "Paula Carrillo",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Mis hijos se comieron todos y no me dejaron :("
+      }
 
+    ]
+  },
   {
-    "id": "2",
+    "id": "boc2",
     "nombre": "Patí",
     "precio": 300,
     "categoria": "Bocadillos",
     "descripcion": "Relleno con carne y chile panameño",
-    "imagen": "../img/mnu/pati.jpeg"
+    "imagen": "../img/mnu/pati.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp",
+        "nombreCliente": "Priscilla Guerra",
+        "direccion": "San José",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "far fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Los patís me llegaron un poco fríos, pero una vez calentados, deliciosos."
+      },
+      {
+        "imgCliente": "data:image/jpeg;base64,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",
+        "nombreCliente": "Andrea Mata",
+        "direccion": "Cartago",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "¡Riquísimos! El chile apenitas."
+      }
+
+    ]
   },
-
-
   {
-    "id": "3",
+    "id": "boc3",
     "nombre": "Tartas de manzana",
     "precio": 300,
     "categoria": "Bocadillos",
     "descripcion": "Mini tartas rellenas de dulce de manzana",
-    "imagen": "/img/mnu/tartaManzana.jpeg"
-  },
+    "imagen": "/img/mnu/tartaManzana.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "data:image/jpeg;base64,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",
+        "nombreCliente": "Sebastián Rodríguez",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star-half-alt fa-sm text-info"
+          }
+        ],
+        "comentario": "Acompañadas con café son riquísimas."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSts1YQrOSfzS8n2-jpnh2aZhGFj8jeIHjy1Q&s",
+        "nombreCliente": "Pedro Vargas",
+        "direccion": "Cartago",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "far fa-star fa-sm text-info",
+            "estrella5": "far fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Me llegó incompleto el pedido."
+      }
 
+    ]
+  },
   {
-    "id": "4",
+    "id": "boc4",
     "nombre": "Enchiladas",
     "precio": 300,
     "categoria": "Bocadillos",
     "descripcion": "Rellenas de pollo o de carne",
-    "imagen": "/img/mnu/enchilada.jpeg"
-  },
+    "imagen": "/img/mnu/enchilada.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZsINAeXhg_aONZrbZrMTZEjopaRJ1xmlVA&s",
+        "nombreCliente": "Patricia Hernández",
+        "direccion": "Cartago",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star-half-alt fa-sm text-info"
+          }
+        ],
+        "comentario": "A partir de hoy soy cliente frecuente."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBFy0j_72yEKBKNRbPbCzxfNxq1H9Y57ygg&s",
+        "nombreCliente": "Andrea Salazar",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Las mejores enchiladas que he probado."
+      }
 
+    ]
+  },
   {
-    "id": "5",
+    "id": "boc5",
     "nombre": "Empanadas de masa",
     "precio": 750,
     "categoria": "Bocadillos",
     "descripcion": "Rellenas con queso o pollo",
-    "imagen": "/img/mnu/empanadas.jpeg"
+    "imagen": "/img/mnu/empanadas.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRazGKny1CSlH3XZGzdceONvBwSZqNVKklLnA&s",
+        "nombreCliente": "John Paterson",
+        "direccion": "Limón",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Un sabor único y espectacular."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqcVXIgWCvTbb55lDj91N_g2rd0F3rma21CA&sp",
+        "nombreCliente": "Juan Carlos Espinoza",
+        "direccion": "San José",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "far fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "El pedido tardó más de la cuenta, pero valió la pena la espera. Muy rico todo."
+      }
+
+    ]
   },
   {
-    "id": "6",
+    "id": "boc6",
     "nombre": "Pan Bon",
     "precio": 5000,
     "categoria": "Bocadillos",
     "descripcion": "Con pasas, frutillas y glaseado de caramelo",
-    "imagen": "/img/mnu/panBon.jpeg"
-  }, 
+    "imagen": "/img/mnu/panBon.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxdL851K9XbRXH4bclsRYh3jAcnqmqn0wtBg&s",
+        "nombreCliente": "Deysha Hernández",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Me recuerda el pan bon que hacía mi abuela. Riquísimo."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZUUzPWexwYFKYLr3eR81HIW6UGWZcAKoSQ&s",
+        "nombreCliente": "Andrés Pérez",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Espectacular"
+      }
 
+    ]
+  },
   {
-    "id": "7",
+    "id": "boc7",
     "nombre": "Mini pies de limón",
     "precio": 300,
     "categoria": "Bocadillos",
     "descripcion": "Con topping de merengue y frutilla",
-    "imagen": "/img/mnu/miniPieLimon.jpeg"
-  }, 
+    "imagen": "/img/mnu/miniPieLimon.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTimv-9MvUZJxRfGEAsXT-a0om9aM2_7q7Pkg&s",
+        "nombreCliente": "Ignacio Acevedo",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "A mi esposa y a mí nos encantaron. Muy buena calidad"
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREG9iiE0sF0Y9I4oD-ckmJIS3gF8DIUrzQiA&s",
+        "nombreCliente": "Juan Fernández",
+        "direccion": "San José",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star-half-alt fa-sm text-info"
+          }
+        ],
+        "comentario": "No les pongo 5 estrellas porque se acabaron jaja."
+      }
 
+    ]
+  },
   {
-    "id": "8",
+    "id": "boc8",
     "nombre": "Cangrejos dulces",
     "precio": 250,
     "categoria": "Bocadillos",
     "descripcion": "Rellenos de dulce de leche",
-    "imagen": "/img/mnu/cangrejoDulceLeche.jpeg"
-  },
+    "imagen": "/img/mnu/cangrejoDulceLeche.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDSngwBzdqhFeltYWrtD-n8v-ZggF-PKAFcw&s",
+        "nombreCliente": "Leo Pérez",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "¡100!"
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Fi6WklVT0V34b6VYv2frbs0t4z8PX91Low&s",
+        "nombreCliente": "Andrés Hernández",
+        "direccion": "Cartago",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "far fa-star fa-sm text-info",
+            "estrella5": "far fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Muy dulces para mi gusto."
+      }
 
+    ]
+  },
   {
-    "id": "9",
+    "id": "plat1",
     "nombre": "Rice and Beans",
     "precio": 6000,
     "categoria": "Platillos",
     "descripcion": "Delicioso Rice and Beans con pollo caribeño",
-    "imagen": "/img/mnu/riceAndBeans.jpeg"
-  }, 
+    "imagen": "/img/mnu/riceAndBeans.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6MnuZRpaXTBNsQ6_mJE0LRygYlufZdoRXiw&s",
+        "nombreCliente": "Antonio Guerrero",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Excelente servicio y presentación. Nuestros clientes quedaron encantados."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAe9NZZk7nUE_anJir2Scf7tsqMHRdEpCbJg&s",
+        "nombreCliente": "Richard Jiménez Brown",
+        "direccion": "Limón",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "El mejor rice and beans que he probado."
+      }
 
+    ]
+  },
   {
-    "id": "10",
+    "id": "plat2",
     "nombre": "Pastel de pollo",
     "precio": 6000,
     "categoria": "Platillos",
     "descripcion": "Pastel de pollo fresco acompañado con ensalada de lechuga y tomate",
-    "imagen": "/img/mnu/pastelPolloEnsalada.jpg"
-  },
+    "imagen": "/img/mnu/pastelPolloEnsalada.jpg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZi-CRo_Dl2J-t7UlBtkt2JLIFPEmpw0HVOg&s",
+        "nombreCliente": "Stephanie Ortega",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Todos en la oficina quedaron encantados."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxk-XtuDxjZgp9tPvVdbgXqmc5GbysBDV2sw&s",
+        "nombreCliente": "Pedro Antonio Zamora",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "far fa-star fa-sm text-info",
+            "estrella3": "far fa-star fa-sm text-info",
+            "estrella4": "far fa-star fa-sm text-info",
+            "estrella5": "far fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Nunca llegó mi pedido."
+      }
 
+    ]
+  },
   {
-    "id": "11",
+    "id": "plat3",
     "nombre": "Lasaña de pollo",
     "precio": 6000,
     "categoria": "Platillos",
     "descripcion": "Lasaña de pollo fresco acompañado con ensalada de lechuga y tomate",
-    "imagen": "/img/mnu/lasannaPolloEnsalada.webp"
-  }, 
+    "imagen": "/img/mnu/lasannaPolloEnsalada.webp",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6-KsNGUoKgyIAATW1CNPeVSHhZzS_FN0Zg&s",
+        "nombreCliente": "Andrés Mata",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "¡Espectacular!"
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFLadtDV9nM_GC25SaEpUXDB0BYYH4jDXVcw&s",
+        "nombreCliente": "Luis Carvajal",
+        "direccion": "San José",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Para chuparse los dedos."
+      }
 
+    ]
+  },
   {
-    "id": "12",
+    "id": "pos1",
     "nombre": "Tartaleta de fresa",
     "precio": 350,
     "categoria": "Postres",
     "descripcion": "Rellenas de leche condensada con trozos de fresa encima",
-    "imagen": "/img/mnu/tartaletaFresa.jpeg"
-  },
+    "imagen": "/img/mnu/tartaletaFresa.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoPcZzK4p73Bihik2zx0Q7U7Uad1RdEkMz-Q&s",
+        "nombreCliente": "Andrea Chávez",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Hermosa presentación y deliciosos."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYvM-BbPVv6WA631UH8iwVoe50ThapAGpEcA&s",
+        "nombreCliente": "Alondra Rodríguez",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Un place hacer negocios con ustedes. La empresa quedó fascinada con los productos."
+      }
 
+    ]
+  },
   {
-    "id": "13",
+    "id": "pos2",
     "nombre": "Tartaleta de Kiwi",
     "precio": 400,
     "categoria": "Postres",
     "descripcion": "Rellenas de leche condensada con trozos de kiwi encima",
-    "imagen": "/img/mnu/tartaletaKiwi.jpeg"
-  },
+    "imagen": "/img/mnu/tartaletaKiwi.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSruFQg9JjFCTJHEgKKPuub37EEcREWKn3Gqg&s",
+        "nombreCliente": "Patricia Fuentes",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "far fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Muy rico."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-NV9q05F16g50huet5CWXj-AtbmH30NTR4A&s",
+        "nombreCliente": "Beverly Guzmán",
+        "direccion": "Guanascaste",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Linda presentación y cómodo precio."
+      }
 
+    ]
+  },
   {
-    "id": "14",
+    "id": "pos3",
     "nombre": "Canastitas de melocotón",
     "precio": 350,
     "categoria": "Postres",
     "descripcion": "Rellenas de leche condensada y melocotón encima",
-    "imagen": "/img/mnu/canastitaMelocoton.jpeg"
-  },
+    "imagen": "/img/mnu/canastitaMelocoton.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsM880bjChhmZTh2vEnO9GT7BiNTMRs96d-g&s",
+        "nombreCliente": "Santiago Peter",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Demasiado para la vida."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5PNXuYFiJnkheD0pytYr02ENPyCTpYULPcw&s",
+        "nombreCliente": "Paula Carrillo",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star-half-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Muy bueno."
+      }
 
+    ]
+  },
   {
-    "id": "15",
+    "id": "pos4",
     "nombre": "Tartaletas de fruta",
     "precio": 350,
     "categoria": "Postres",
     "descripcion": "Rellenas de leche condensada con trozos de frutas encima",
-    "imagen": "/img/mnu/tartaletaFruta.jpeg"
-  },
+    "imagen": "/img/mnu/tartaletaFruta.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0PatHceUxtvIyS1k0CmAEYPCd45om57YsNQ&s",
+        "nombreCliente": "Anthony Pérez",
+        "direccion": "San José",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Muy rico postre."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Hh-0haLGn80UJmS7HSq7-9_k3zMmBjjbJw&s",
+        "nombreCliente": "Kamir Pérez",
+        "direccion": "San José",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star-half-alt fa-sm text-info"
+          }
+        ],
+        "comentario": "10/10."
+      }
 
+    ]
+  },
   {
-    "id": "16",
+    "id": "pos5",
     "nombre": "Alfajores",
     "precio": 350,
     "categoria": "Postres",
     "descripcion": "Rellenas de dulce de leche con trocitos de coco encima",
-    "imagen": "/img/mnu/alfajores.jpeg"
-  },
+    "imagen": "/img/mnu/alfajores.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvtxSvqIKGN_mACTeaA7BvO_Zgh2HQdJFIQg&s",
+        "nombreCliente": "Juan Antonio Carrillo",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Mi postre favorito de ahora en adelante."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTVXnobTbGkz-019vMRoXcjk1eaoyOC524rA&s",
+        "nombreCliente": "Paulo Zamora",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "A mi familia le encantaron."
+      }
 
+    ]
+  },
   {
-    "id": "17",
+    "id": "pos6",
     "nombre": "Tres Leches (4 personas)",
     "precio": 15000,
     "categoria": "Postres",
     "descripcion": "Tres leches con topping de merengue y trozos de melocotón",
-    "imagen": "/img/mnu/tresLeches.jpeg"
-  },
+    "imagen": "/img/mnu/tresLeches.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjHrgporUEXIlQg-eD2temlCDEY6mY7sNZeg&s",
+        "nombreCliente": "Andrea Chávez",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "La presentación de 10. Valió la pena pedir el producto"
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs99T2aexjbvqfxac1rxEiLguWz7qDOIBcjA&s",
+        "nombreCliente": "Luis Vargas.",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Excelente atención y riquísimo el tres leches."
+      }
 
+    ]
+  },
   {
-    "id": "18",
+    "id": "pos7",
     "nombre": "Mousse de maracuyá",
     "precio": 500,
     "categoria": "Postres",
     "descripcion": "Mousse 100% natural de maracuyá",
-    "imagen": "/img/mnu/mousseMaracuya.jpeg"
-  },
+    "imagen": "/img/mnu/mousseMaracuya.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tktuYWU9m8IFGYAhZhBw7KBSwRh3BpJmTQ&s",
+        "nombreCliente": "Manuel Pérez",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Un manjar"
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvuJWme54ClGK9AFPTzvU3YnpZ3VEUsBVL7g&s",
+        "nombreCliente": "Paula Carrillo",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "Recomendadísimo."
+      }
 
+    ]
+  },
   {
-    "id": "19",
+    "id": "pos8",
     "nombre": "Mini pies de limón",
     "precio": 250,
     "categoria": "Postres",
     "descripcion": "Bocadillos mini de pie de limón con merengue encima",
-    "imagen": "/img/mnu/miniPieLimon.jpeg"
+    "imagen": "/img/mnu/miniPieLimon.jpeg",
+    "reviews": [
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7983pL78uQUe9zulPd_AzoMHvHq9_iQUAqw&s",
+        "nombreCliente": "Andrea Chávez",
+        "direccion": "Heredia",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "far fa-star fa-sm text-info",
+            "estrella5": "far fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "No me gustaron mucho."
+      },
+      {
+        "imgCliente": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlHTd7q7JcF6px8nAR6S7t2aD9b3oXazKuRA&s",
+        "nombreCliente": "Andrés Camaro",
+        "direccion": "Alajuela",
+        "puntuacion": [
+          {
+            "estrella1": "fas fa-star fa-sm text-info",
+            "estrella2": "fas fa-star fa-sm text-info",
+            "estrella3": "fas fa-star fa-sm text-info",
+            "estrella4": "fas fa-star fa-sm text-info",
+            "estrella5": "fas fa-star fa-sm text-info"
+          }
+        ],
+        "comentario": "En la oficina quedaron fascinados."
+      }
+    ]
   }
-   
 ]
