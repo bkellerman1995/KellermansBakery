@@ -553,11 +553,6 @@ footer {
     padding: 15px; /* Espaciado interno */
 }
 
-.accordion-button:not(.collapsed) {
-    background-color: #f5f5dc; /* Fondo para preguntas activas */
-    color: #000; /* Color más oscuro para preguntas activas */
-}
-
 /* Estilo para el contenido de las respuestas */
 .accordion-body {
     font-size: 1rem; /* Tamaño de texto estándar */
@@ -597,5 +592,16 @@ background-color:#f5f5dc; ;
 
 #containeraccordion .accordion-body {
     background-color: #f5f5dc;
+}
+
+#containeraccordion .accordion-button {
+    background-color: #f5f5dc;
+    color: #000; /* Ajusta el color del texto si es necesario */
+    border: none; /* Opcional: elimina bordes */
+}
+
+#containeraccordion .accordion-button:not(.collapsed) {
+    background-color: #f5f5dc;
+    color: #000; /* Ajusta el color del texto */
 }
 
