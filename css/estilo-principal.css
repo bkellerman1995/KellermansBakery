@@ -618,8 +618,26 @@ background-color:#f5f5dc; ;
 
 .CardContacto{
     background-color: #f5f5dc;
+    height: 250px; /* Altura fija */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
     
+.btn-contacto-Enviar{
 
+    background-color: #8B4513;
+  
+}
+.btn-contacto-Enviar:hover{
+    background-color: #8B4513;
+    border: 2px solid black;
+    
+}
 
