@@ -542,3 +542,56 @@ footer {
  #navbarNav .nav-item {
     text-align: center; /* Center-align each item */
 }
+
+/* Estilo general del accordion*/
+.accordion-button {
+    font-size: 1.1rem; /* Tamaño de texto de la pregunta */
+    font-weight: bold; /* Negrita para destacar */
+    text-align: left; /* Alinear el texto a la izquierda */
+    color: #f5f5dc; /* Color del texto */
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 15px; /* Espaciado interno */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f5f5dc; /* Fondo para preguntas activas */
+    color: #000; /* Color más oscuro para preguntas activas */
+}
+
+/* Estilo para el contenido de las respuestas */
+.accordion-body {
+    font-size: 1rem; /* Tamaño de texto estándar */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f5f5dc;; /* Fondo blanco */
+    border: 1px solid #f5f5dc; /* Borde alrededor del contenido */
+    border-top: none; /* Sin borde superior */
+    border-radius: 0 0 5px 5px; /* Bordes redondeados solo en la parte inferior */
+}
+
+/* Espaciado entre elementos del accordion */
+.accordion-item {
+    margin-bottom: 15px;
+    background-color: f5f5dc ;
+}
+
+/* Responsive: ajustar tamaño del texto en dispositivos más pequeños */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 1rem; /* Reducir tamaño del texto */
+    }
+    .accordion-body {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+    }
+}
+
+.FAQSBOOSTRAP{
+
+background-color:#f5f5dc; ;
+}
+
+.accordion-button collapsed{
+    background-color:#f5f5dc; 
+
+}
