@@ -532,3 +532,13 @@ footer {
   .phone {
     background-color: #4CAF50;
   }
+
+  /* Centrar texto cuando el navbar se expande (menu de hamburguesa) */
+  #navbarNav.show {
+    flex-direction: column; 
+    align-items: flex-start;   
+ }
+
+ #navbarNav .nav-item {
+    text-align: center; /* Center-align each item */
+}
