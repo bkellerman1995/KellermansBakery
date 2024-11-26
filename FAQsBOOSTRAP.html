@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--Soporte de carácteres especiales-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Web">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Bryan Kellerman">
+
+    <!--Adaptar la página a dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Referencia archivoa externos css-->
+    <link href="/css/estilo-principal.css" rel="stylesheet">
+    <link href="/css/estilo-flexbox.css" rel="stylesheet">
+    <link href="/css/estilo-grid.css" rel="stylesheet">
+
+    <!--Referencia bootstrap local-->
+    <!--<link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">-->
+
+    <!--CSS de Bootstrap por CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--JS de Bootstrap por CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!--Titulo a mostrar en la pestaña del navegador-->
+    <title>Kellerman's Bakery</title>
+
+</head>
+
+<body class="FAQSBOOSTRAP">
+    <!--Encabezado de la página-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" >
+            <div class="container-fluid">
+                <a class="navbar-brand contenedorLogo" href="indexBOOTSTRAP.html"> <img src="./img/logo.png" width="225"
+                        alt=""> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-5 h4 bg-dark rounded" style="--bs-bg-opacity: .5;">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="indexBOOTSTRAP.html">INICIO<span
+                                    class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="Nosotros.html">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="mnuBOOTSTRAP.html">MENÚ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="blog.html">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="ContactoBOOSTRAP.html">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="FAQsBOOSTRAP.html">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="AcercaDe.html">ACERCA DE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" id="carrito" href="Carrito.html">CARRITO</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Encabezado-->
+    <div class="container text-center my-4">
+        <h2 class="mb-3">Preguntas Frecuentes</h2>
+        <p>Abajo encontrarás respuestas a las preguntas más comunes.</p>
+    </div>
+
+    <!--Accordion-->
+    <main id = "containeraccordion"class="container">
+        <div class="accordion" id="faqAccordion">
+            <!--Pregunta 1-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Qué tipo de comida ofrece Kellerman's Bakery?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        En Kellerman's Bakery, nos especializamos en una deliciosa variedad de platos y repostería tradicional del Caribe. Nuestro menú incluye opciones populares como "rice and beans", un plato clásico de arroz con frijoles; "patty", un pastel relleno típico de carne;"cangrejos rellenos de leche condensada", un postre único y cremoso. Todos nuestros productos están inspirados en los sabores auténticos del Caribe, con un toque casero que los hace irresistibles. Puedes ver el menú". <a href="mnu.html" target="_blank"><b><i>Ver menú</i></b></a>.
+                    </div>
+                </div>
+            </div>
+
+            <!--Pregunta 2-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Los productos son horneados o fritos?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        La mayoría de los productos en Kellerman's Bakery son horneados, lo que permite resaltar los sabores
+                auténticos de los ingredientes y ofrecer una opción más saludable. El horneado también le da a la
+                repostería un color dorado característico que es parte de nuestra identidad. Sin embargo, también
+                contamos con algunos artículos que son fritos, como ciertos aperitivos tradicionales, para brindarte una
+                experiencia culinaria auténtica y variada del Caribe.
+                    </div>
+                </div>
+            </div>
+
+            <!--Pregunta 3-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Puedo hacer pedidos personalizados para eventos o catering?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Por supuesto. Ofrecemos servicios de catering y aceptamos pedidos personalizados para eventos como
+                        cumpleaños, bodas o reuniones familiares. Podemos adaptar los productos a tus necesidades específicas,
+                        ya sea en tamaño, cantidad o incluso en el diseño de los pasteles y postres. Recomendamos contactarnos
+                        con al menos 48 horas de anticipación para asegurar la disponibilidad y cumplir con tus expectativas.
+                    </div>
+                </div>
+            </div>
+
+            <!--Pregunta 4-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        ¿Utilizan ingredientes locales o importados?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                Siempre que sea posible, usamos ingredientes locales para apoyar a la comunidad y garantizar la frescura
+                de nuestros productos. Por ejemplo, las frutas tropicales y ciertos productos frescos provienen de
+                proveedores locales.
+                    </div>
+                </div>
+            </div>
+
+            <!--Pregunta 5-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        ¿Qué métodos de pago aceptan?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        En Kellerman's Bakery aceptamos una variedad de métodos de pago para tu comodidad. Puedes pagar en
+                        efectivo al comprar los productos en persona. También aceptamos transferencias bancarias y SINPE Móvil.
+                    </div>
+                </div>
+
+
+            </div>
+                 <!--Pregunta 6-->
+                 <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            ¿Cómo puedo mantener los productos frescos después de comprarlos?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Para mantener la frescura de nuestros productos horneados, te recomendamos guardarlos en un lugar fresco
+                            y seco, preferiblemente en un recipiente hermético. Los productos como los "patty" se pueden recalentar
+                             en el horno para devolverles su textura crujiente. Los postres, como los "cangrejos rellenos de leche
+                             condensada", se deben refrigerar y consumir en un período de 2-3 días para disfrutar de su mejor sabor.
+                             Si tienes alguna duda sobre la conservación de un producto específico, no dudes en consultarnos.
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="contenedorRedesSociales d-flex align-items-center flex-column">
+            <h5>Nuestras redes sociales</h5>
+
+            <!--Contenedor de Facebook-->
+            <div class="contenedorFacebook text-center">
+                <a class=linkFacebook target="_blank" href="https://www.facebook.com/profile.php?id=100083469393808">
+                    <img class="w-10" src="img/principal/fbLogo.png" />
+                </a>
+            </div>
+            <h5>© 2024, Caribbean Culinary Delights. Todos los derechos reservados.</h5>
+        </div>
+
+        
+    </footer>
+
+</body>
+
+</html>

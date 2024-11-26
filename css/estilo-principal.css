@@ -453,7 +453,7 @@ aside p {
     align-self: center;
 }
 
-footer {
+/*footer {
     background-color: #8B4513;
     display: block;
     padding: 10px;
@@ -462,6 +462,44 @@ footer {
     width: 100%;
     color: white;
     position: static;
+}*/
+
+footer {
+    background-color: #8B4513; /* Color de fondo opcional */
+    color: white; /* Color de texto */
+    padding: 20px; /* Ajuste de padding */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.footer-info {
+    max-width: 50%; /* Limita el ancho de la información */
+    width: 100%;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.footer-social a {
+    display: block; /* Para que los enlaces estén en líneas separadas */
+    margin: 5px 0; /* Espaciado entre enlaces */
+    color: white;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    text-decoration: underline; /* Efecto al pasar el mouse */
+}
+
+#map {
+    width: 50%; /* Asigna el 50% del ancho al mapa */
+    height: 400px; /* Altura fija */
+    border: 2px solid #ccc; /* Borde alrededor del mapa */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para el mapa */
+    margin-left: 20px; /* Espaciado a la izquierda del mapa */
 }
 
 #btnTop {
@@ -542,3 +580,102 @@ footer {
  #navbarNav .nav-item {
     text-align: center; /* Center-align each item */
 }
+
+
+/* Estilo general del accordion*/
+.accordion-button {
+    font-size: 1.1rem; /* Tamaño de texto de la pregunta */
+    font-weight: bold; /* Negrita para destacar */
+    text-align: left; /* Alinear el texto a la izquierda */
+    color: #f5f5dc; /* Color del texto */
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Estilo para el contenido de las respuestas */
+.accordion-body {
+    font-size: 1rem; /* Tamaño de texto estándar */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f5f5dc;; /* Fondo blanco */
+    border: 1px solid #f5f5dc; /* Borde alrededor del contenido */
+    border-top: none; /* Sin borde superior */
+    border-radius: 0 0 5px 5px; /* Bordes redondeados solo en la parte inferior */
+}
+
+/* Espaciado entre elementos del accordion */
+.accordion-item {
+    margin-bottom: 15px;
+    background-color: f5f5dc ;
+}
+
+/* Responsive: ajustar tamaño del texto en dispositivos más pequeños */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 1rem; /* Reducir tamaño del texto */
+    }
+    .accordion-body {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+    }
+}
+
+/*background color de la pagina*/
+
+.FAQSBOOSTRAP{
+
+background-color:#f5f5dc; ;
+}
+
+#containeraccordion .accordion-item {
+    background-color: #f5f5dc;
+}
+
+#containeraccordion .accordion-body {
+    background-color: #f5f5dc;
+}
+
+#containeraccordion .accordion-button {
+    background-color: #f5f5dc;
+    color: #000; /* Ajusta el color del texto si es necesario */
+    border: none; /* Opcional: elimina bordes */
+}
+
+#containeraccordion .accordion-button:not(.collapsed) {
+    background-color: #f5f5dc;
+    color: #000; /* Ajusta el color del texto */
+}
+
+
+.main-bg {
+    background-color: #f5f5dc;
+}
+.contactoBOOSTRAP{
+    background-color: #f5f5dc;
+}
+
+.CardContacto{
+    background-color: #f5f5dc;
+    height: 250px; /* Altura fija */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+    
+.btn-contacto-Enviar{
+
+    background-color: #8B4513;
+  
+}
+.btn-contacto-Enviar:hover{
+    background-color: #8B4513;
+    border: 2px solid black;
+    
+}
+

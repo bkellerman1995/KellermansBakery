@@ -53,9 +53,9 @@
         <!--navBar-->
         <nav>
             <ul> <!--Para estilizar el nav (elementos)-->
-                <li><a href="index.html">INICIO</a></li>
+                <li><a href="indexBOOTSTRAP.html">INICIO</a></li>
                 <li><a href="Nosotros.html">NOSOTROS</a></li>
-                <li><a href="mnu.html">MENÚ</a></li>
+                <li><a href="mnuBOOTSTRAP.html">MENÚ</a></li>
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="Contacto.html">CONTACTO</a></li>
                 <li><a href="FAQs.html">FAQs</a></li>
@@ -100,28 +100,41 @@
 
                 <!--Estructura de contenedor para contactar negocio-->
                 <div class="contactarNegocio">
-                    <h4>Si tienes preguntas, déjanos la siguiente información y con gusto te
-                        contactaremos.
-                    </h4>
-
-                    
-                    <label for = "telefonoUsuario"><b>Teléfono</b></label>
-                    <input type = "tel" id = "telefonoUsuario" name="telefonoUsuario">
-
-                    <label for = "nombreUsuario"><b>Nombre</b></label>
-                    <input type = "text" id ="nombreUsuario" name="nombreUsuario">
-
-                    <label for = "email"><b>Correo</b></label>
-                    <input autocomplete="on" type="email" id="email" pattern=".+@example\.com" size="30" required 
-                    name = "email"/>
-
-                    <label for = "textArea"><b>Comentarios</b></label>
-                    <textarea id = "textArea" rows="1" cols = "20" name="comentarios"></textarea>
-
+                    <h4>Si tienes preguntas, déjanos la siguiente información y con gusto te contactaremos.</h4>
+                
+                    <label for="telefonoUsuario"><b>Teléfono</b></label>
+                    <input type="tel" id="telefonoUsuario" name="telefonoUsuario">
+                
+                    <label for="nombreUsuario"><b>Nombre</b></label>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario">
+                
+                    <label for="email"><b>Correo</b></label>
+                    <input autocomplete="on" type="email" id="email" pattern=".+@example\.com" size="30" required name="email">
+                
+                    <label for="fechaNacimiento"><b>Fecha de Nacimiento</b></label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                
+                    <label for="genero"><b>Género</b></label>
+                    <select id="genero" name="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                
+                    <label for="tipoConsulta"><b>Tipo de Consulta</b></label>
+                    <select id="tipoConsulta" name="tipoConsulta">
+                        <option value="general">General</option>
+                        <option value="productos">Productos</option>
+                        <option value="sugerencias">Sugerencias</option>
+                    </select>
+                
+                    <label for="textArea"><b>Comentarios</b></label>
+                    <textarea id="textArea" rows="1" cols="20" name="comentarios"></textarea>
+                
                     <br><br><br>
-                    <button onclick ="enviarInfo()" id="btnEnviarInfo">Enviar</button>
-
+                    <button onclick="enviarInfo()" id="btnEnviarInfo">Enviar</button>
                 </div>
+                
 
             </div>
 
