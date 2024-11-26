@@ -503,7 +503,7 @@ footer {
 }
 
 #btnTop {
-    display: none;
+    display: flex;
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -515,6 +515,8 @@ footer {
     color: white;
     cursor: pointer;
     padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 4px;
   }
   
