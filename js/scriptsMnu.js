@@ -93,7 +93,7 @@ fetch('../json/productos.json')
                                         class="plus" id="botonMasMenu"></button>
                                         </div>
 
-                                        <button class="btn btn-success" onclick="addToCart('${producto.id}')">Agregar al carrito</button>
+                                        <button class="btn btn-success" id ="btnAgregar" onclick="addToCart('${producto.id}')">Agregar al carrito</button>
                 
                                         <button class="btn btn-info" onclick="showDetails('${producto.id}')"
                                         style = "background-color: #8B4513; color: white; border-style:none">Mostrar detalles</button>
@@ -279,7 +279,7 @@ fetch('../json/productos.json')
 function updateButtonState() {
     //Seleccionar el input de número (clase quantity) y el botón de agregar al carrito (clase btn-success)
     const quantityInput = document.querySelector('.quantity');
-    const addToCartButton = document.querySelector('.btn-success');
+    const addToCartButton = document.getElementById('btnAgregar');
 
     if (quantityInput.value <= 0) {
         addToCartButton.disabled = true; // Deshabilita el botón

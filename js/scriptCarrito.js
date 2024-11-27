@@ -78,7 +78,6 @@ function displayCart() {
                 <img src="${item.imagen}" class="img-fluid" style="width: 150px; border-radius: 15px;" alt="${item.nombre}">
             </div>
             <div class="flex-grow-1 ms-3">
-                <a href="#!" class="float-end"><i class="fas fa-times"></i></a>
                 <h5 class="text-primarycarrito">${item.nombre}</h5>
                 <div class="d-flex align-items-center">
                     <p class="fw-bold mb-0 me-5 pe-3"> &#8353 ${item.subtotal}</p>
