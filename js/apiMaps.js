@@ -2,7 +2,7 @@
 function initMap() {
     // Opciones del mapa
     const mapOptions = {
-        center: { lat: 10.00714128347572, lng: -84.21642988116847 }, // Coordenadas de la UTN
+        center: { lat: 10.027848096914072, lng: -84.17165563849521}, // Coordenadas de la UTN
         zoom: 15, // Nivel de zoom
     };
 
@@ -11,8 +11,8 @@ function initMap() {
 
     // Agregar un marcador al mapa
     const marker = new google.maps.Marker({
-        position: { lat: 10.00714128347572, lng: -84.21642988116847 },
+        position: { lat: 10.027848096914072, lng: -84.17165563849521},
         map: map,
-        title: "Universidad Técnica Nacional", // Título del marcador
+        title: "Kellerman's Bakery", // Título del marcador
     });
 }
