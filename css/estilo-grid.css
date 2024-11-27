@@ -245,15 +245,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
+        margin:auto;
         /* Ensures horizontal centering */
     }
 
-    .contenedorLogo img {
-        max-width: 150px;
-        /* Smaller logo size for mobile */
-        height: auto;
-    }
+
 
 
     nav ul {
@@ -266,10 +262,6 @@
         /*Agregar un margen de 10 px 
         arriba */
         margin-top: 10px;
-    }
-
-    nav ul li {
-        background-color: rgb(67, 34, 34);
     }
 
     .contenedor-bocadillos,
