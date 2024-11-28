@@ -426,9 +426,9 @@ function generatePDF(envioDomicilio) {
         subtotal += item.precio * item.cantidad;
         doc.rect(14, y, tableWidth, rowHeight); // Bordes de la fila
         doc.text(item.nombre, 15, y + 7);
-        doc.text(`CRC${item.precio.toFixed(2)}`, 80, y + 7);
+        doc.text(`CRC ${item.precio.toFixed(2)}`, 80, y + 7);
         doc.text(item.cantidad.toString(), 120, y + 7);
-        doc.text(`CRC${subtotal.toFixed(2)}`, 150, y + 7);
+        doc.text(`CRC ${subtotal.toFixed(2)}`, 150, y + 7);
         y += rowHeight; // Incremento para la siguiente línea
 
     });
@@ -441,14 +441,14 @@ function generatePDF(envioDomicilio) {
     //Chequear si el envío es por domicilio o recoger en tienda
     if (envioDomicilio === true) {
         doc.text("Envío: a dirección postal", 15, y + 7);
-        doc.text(`CRC${envio.toFixed(2)}`, 150, y + 7);
+        doc.text(`CRC ${envio.toFixed(2)}`, 150, y + 7);
         subtotal += envio;
 
     }
     else {
         doc.text("Envío: recoger en tienda", 15, y + 7);
         envio = 0;
-        doc.text(`CRC${envio.toFixed(2)}`, 150, y + 7);
+        doc.text(`CRC ${envio.toFixed(2)}`, 150, y + 7);
     }
     y += rowHeight; // Incremento para la siguiente línea
 
@@ -459,7 +459,7 @@ function generatePDF(envioDomicilio) {
     doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo del total
     doc.setTextColor(0, 0, 0); // Texto negro
     doc.text("Total (13% IVA incluido):", 15, y + 7);
-    doc.text(`CRC${total.toFixed(2)}`, 150, y + 7);
+    doc.text(`CRC ${total.toFixed(2)}`, 150, y + 7);
 
     y += rowHeight; // Incremento para la siguiente línea
     y += rowHeight; // Incremento para la siguiente línea
