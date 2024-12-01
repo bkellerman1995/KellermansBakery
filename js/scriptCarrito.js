@@ -27,7 +27,7 @@ function displayCart() {
         document.getElementById('typeText').value = '';
         $('#typeText').css("backgroundColor", "#EAECEF");
         cardIcon.innerHTML = '<img src =""/>';
-        
+
         document.getElementById('typeText').disabled = true;
 
         document.getElementById('typeName').value = '';
@@ -197,7 +197,7 @@ document.addEventListener('change', (event) => {
                 products.splice(productIndex, 1);
                 event.target.closest('.product').remove();
             }
-    }
+        }
 
         //Guardar el carrito actualizado en el local storage del navegador
         localStorage.setItem('cart', JSON.stringify(products));
@@ -357,7 +357,7 @@ function ingresarDatosTarjeta() {
 
     //vaciar el carrito de compras
     localStorage.setItem('cart', JSON.stringify([]));
-    
+
     //Cargar el carrito de nuevo
     displayCart();
 
@@ -388,6 +388,7 @@ function generatePDF(envioDomicilio) {
     doc.setTextColor(0, 0, 0); // Color negro
     doc.setFont("arial", "bold"); // Establecer fuente en negrita
     doc.text("Factura de Compra", 105, 20, null, null, 'center'); // Centrado horizontalmente
+    doc.addImage('./img/logo.png', 'PNG', 0, 0, 50, 50);
     doc.setTextColor(0, 0, 0); // Color negro
     doc.setFont("arial", "normal"); // Establecer fuente normal
     doc.setFontSize(12);
@@ -397,12 +398,23 @@ function generatePDF(envioDomicilio) {
     // Verificar el nombre del cliente y asignar "Contado" si está vacío
     const customerNameDisplay = nombre.trim() === "" ? "Contado" : nombre;
 
-    doc.text(`Nombre del cliente: ${customerNameDisplay}`, 14, 40); // Posición vertical después del número de factura
+    // Obtener el ancho de la página
+    const pageWidth = doc.internal.pageSize.getWidth();
+
+    // Calcular el ancho de la página
+    const textWidth = doc.getTextWidth(`Nombre del cliente: ${customerNameDisplay}`);
+
+    // Calcular la coordinada x para el texto centrado
+    const x = (pageWidth - textWidth) / 2;
+
+    // Agregar el texto centrado
+    doc.text(`Nombre del cliente: ${customerNameDisplay}`, x, 40);
 
     let y = 45; // posición vertical inicial
     let total = 0;
     let envio = 500;
     const iva = 0.13;
+    let subTotalProducto = 0;
     let subtotal = 0;
 
 
@@ -423,12 +435,13 @@ function generatePDF(envioDomicilio) {
 
     // Detalles de los productos
     products.forEach(item => {
-        subtotal += item.precio * item.cantidad;
+        subTotalProducto = item.precio * item.cantidad;
         doc.rect(14, y, tableWidth, rowHeight); // Bordes de la fila
         doc.text(item.nombre, 15, y + 7);
         doc.text(`CRC ${item.precio.toFixed(2)}`, 80, y + 7);
         doc.text(item.cantidad.toString(), 120, y + 7);
-        doc.text(`CRC ${subtotal.toFixed(2)}`, 150, y + 7);
+        doc.text(`CRC ${subTotalProducto.toFixed(2)}`, 150, y + 7);
+        subtotal += subTotalProducto;
         y += rowHeight; // Incremento para la siguiente línea
 
     });
