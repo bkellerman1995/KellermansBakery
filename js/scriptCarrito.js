@@ -551,7 +551,13 @@ function applyResponsiveStyles() {
                         <hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>
     `;
             container.insertAdjacentHTML('beforeend', productHTML);
-        })
+        });
+        container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Subtotal:</p><p class="fw-bold" <span id="subtotal">₡0</p></div>');
+        container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">IVA (13%):</p><p class="fw-bold"><span id="iva">₡0</p></div>');
+        container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between p-2 mb-2 bg-primarycarrito"><h5 class="fw-bold mb-0" style="color:white">Total:</h5><h5 class="fw-bold mb-0" style="color:white" <span id="total">₡0</h5> </div>');
+    
+        //Recargar el subtotal y el total
+        updateTotals(false);
     }
     else {
         displayCart();
