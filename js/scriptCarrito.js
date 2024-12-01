@@ -86,7 +86,7 @@ function displayCart() {
                         <button data-mdb-button-init
                             onclick="updateQuantity('${item.id}', -1)"
                             class="minus"></button>
-                        <input class="quantity fw-bold bg-body-tertiary text-body" min="0" name="quantity" 
+                        <input class="quantity fw-bold bg-body-tertiary text-body" style="width:200px" min="0" name="quantity" 
                         value="${item.cantidad}" type="number" readonly>
                         <button data-mdb-button-init
                             onclick="updateQuantity('${item.id}', 1)"
@@ -142,7 +142,7 @@ function updateQuantity(productId, change) {
     localStorage.setItem('cart', JSON.stringify(products));
 
     //Cargar el carrito de nuevo
-    displayCart();
+    applyResponsiveStyles();
 
 };
 
@@ -220,7 +220,7 @@ function deleteProduct(productId) {
     localStorage.setItem('cart', JSON.stringify(products));
 
     // Re-cargar el carro
-    displayCart();
+    applyResponsiveStyles();
 }
 
 // Delegación de eventos para los clics de botones de borrar
@@ -360,7 +360,7 @@ function ingresarDatosTarjeta() {
     localStorage.setItem('cart', JSON.stringify([]));
 
     //Cargar el carrito de nuevo
-    displayCart();
+    applyResponsiveStyles();
 
 }
 
@@ -531,7 +531,7 @@ function applyResponsiveStyles() {
                         <button data-mdb-button-init
                             onclick="updateQuantity('${item.id}', -1)"
                             class="minus"></button>
-                        <input class="quantity fw-bold bg-body-tertiary text-body" min="0" name="quantity" 
+                        <input class="quantity fw-bold bg-body-tertiary text-body" style="width:100%" min="0" name="quantity" 
                         value="${item.cantidad}" type="number" readonly>
                         <button data-mdb-button-init
                             onclick="updateQuantity('${item.id}', 1)"
