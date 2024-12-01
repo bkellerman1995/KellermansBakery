@@ -695,3 +695,16 @@ background-color:#f5f5dc; ;
 .cotenedoracercadeboostrap{
     background-color: #f5f5dc; 
 }
+
+/* Responsive: ajustar tamaño del texto en dispositivos más pequeños */
+@media (min-width: 768px) {
+    .carousel-caption{
+        top: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+}
