@@ -527,7 +527,7 @@ function applyResponsiveStyles() {
                     <div class="flex-grow-1 ms-3" style="text-align:center">
                 <div class="d-flex align-items-center">
 
-                    <div class="def-number-input number-input safari_only" style="position:absolute;margin-left: 4%">
+                    <div class="def-number-input number-input safari_only" style="position:absolute;margin-left: 4%; font:40px">
                         <button data-mdb-button-init
                             onclick="updateQuantity('${item.id}', -1)"
                             class="minus"></button>

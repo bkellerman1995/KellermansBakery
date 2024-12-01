@@ -106,7 +106,7 @@
 }
 
 .shopping-cart .def-number-input.number-input input[type="number"] {
-    max-width: 2rem;
+    max-width: 3rem;
     border: none;
 }
 
@@ -119,6 +119,12 @@
 
 .shopping-cart .def-number-input.number-input button {
     width: 1rem;
+}
+
+@media (max-width: 360px)  or (max-width: 480px){
+    .shopping-cart .def-number-input.number-input button  {
+        width: 15%;
+    }
 }
 
 .shopping-cart .def-number-input.number-input button:before,
