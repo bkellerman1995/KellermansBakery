@@ -507,7 +507,7 @@ function applyResponsiveStyles() {
     // const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
     // const isSmallScreen2 = window.matchMedia('(max-width: 480px)').matches;
 
-    if (screen >=screen360 || screen <= screen480) {
+    if (screen <=screen360 || screen <= screen480) {
 
 
         // Iterar cada producto y crear el div
@@ -517,17 +517,17 @@ function applyResponsiveStyles() {
         <h5 class="text-primarycarrito" style="text-align:center">${item.nombre}</h5>
         <div class="d-flex align-items-center mb-2">
             <div class="flex-shrink-0">
-                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style=" width: 150px;border-radius: 15px; margin-left:50%" alt="${item.nombre}">
+                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style=" width: 125px;border-radius: 15px; margin-left:40%; margin-right:-50%" alt="${item.nombre}">
             </div>
             
 
         </div>
-                            <p class="fw-bold mb-0 me-5 pe-3" style="margin-left:38%"> &#8353 ${item.subtotal}</p>
+                            <p class="fw-bold mb-0 me-5 pe-3" style="margin-left:35%"> &#8353 ${item.subtotal}</p>
                             <br>
                     <div class="flex-grow-1 ms-3" style="text-align:center">
                 <div class="d-flex align-items-center">
 
-                    <div class="def-number-input number-input safari_only" style="position:absolute;margin-left: 12%">
+                    <div class="def-number-input number-input safari_only" style="position:absolute;margin-left: 4%">
                         <button data-mdb-button-init
                             onclick="updateQuantity('${item.id}', -1)"
                             class="minus"></button>
@@ -562,4 +562,5 @@ function applyResponsiveStyles() {
 //Evento de carga inicial
 
 window.addEventListener('resize', applyResponsiveStyles);
-document.addEventListener('DOMContentLoaded', displayCart);
+document.addEventListener('DOMContentLoaded', applyResponsiveStyles);
+
