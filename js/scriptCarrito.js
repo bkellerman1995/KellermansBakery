@@ -12,7 +12,7 @@ function displayCart() {
 
     // Carrito de compras almacenado en localStorage
     const products = JSON.parse(localStorage.getItem('cart')) || [];
-  
+
     //Borrar el contenido de los productos (por defecto)
     container.innerHTML = '<h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Mi pedido</h3><hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>';
 
@@ -496,7 +496,7 @@ function generatePDF(envioDomicilio) {
 function applyResponsiveStyles() {
     // Carrito de compras almacenado en localStorage
     const products = JSON.parse(localStorage.getItem('cart')) || [];
-    
+
     //Borrar el contenido de los productos (por defecto)
     container.innerHTML = '<h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Mi pedido</h3><hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>';
     productHTML = '';
@@ -507,8 +507,56 @@ function applyResponsiveStyles() {
     // const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
     // const isSmallScreen2 = window.matchMedia('(max-width: 480px)').matches;
 
-    if (screen <=screen360 || screen <= screen480) {
+    if (screen <= screen360 || screen <= screen480) {
 
+        // Chequear si hay productos
+        if (products.length === 0) {
+
+            //Deshabilitar los inputs de la sección de tarjeta
+            document.getElementById('typeText').value = '';
+            $('#typeText').css("backgroundColor", "#EAECEF");
+            cardIcon.innerHTML = '<img src =""/>';
+
+            document.getElementById('typeText').disabled = true;
+
+            document.getElementById('typeName').value = '';
+            document.getElementById('typeName').disabled = true;
+
+            document.getElementById('typeCVV').value = '';
+            document.getElementById('typeCVV').disabled = true;
+
+
+            $("input[type=date]").val("");
+
+            document.getElementById('lblEnvio').style.visibility = "hidden";
+            document.getElementById('flexRadioDefault1').style.visibility = "hidden";
+            document.getElementById('tipoEnvio1').style.visibility = "hidden";
+            document.getElementById('flexRadioDefault2').style.visibility = "hidden";
+            document.getElementById('tipoEnvio2').style.visibility = "hidden";
+            document.getElementById('btnComprar').style.visibility = "hidden";
+
+
+            container.insertAdjacentHTML('beforeend', '<p>No hay productos en el carro.</p>');
+            container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Subtotal:</p><p class="fw-bold" <span id="subtotal">₡0</p></div>');
+            container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">IVA (13%):</p><p class="fw-bold"><span id="iva">₡0</p></div>');
+            container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between p-2 mb-2 bg-primarycarrito"><h5 class="fw-bold mb-0" style="color:white">Total:</h5><h5 class="fw-bold mb-0" style="color:white" <span id="total">₡0</h5> </div>');
+
+            return;
+        }
+
+        else {
+
+            //Habilitar los inputs de la sección de tarjeta
+            document.getElementById('typeText').disabled = false;
+            document.getElementById('typeName').disabled = false;
+            document.getElementById('typeExp').disabled = false;
+            document.getElementById('typeCVV').disabled = false;
+            document.getElementById('lblEnvio').style.visibility = "visible";
+            document.getElementById('flexRadioDefault1').style.visibility = "visible";
+            document.getElementById('tipoEnvio1').style.visibility = "visible";
+            document.getElementById('flexRadioDefault2').style.visibility = "visible";
+            document.getElementById('btnComprar').style.visibility = "visible";
+        }
 
         // Iterar cada producto y crear el div
         products.forEach(item => {
@@ -555,7 +603,7 @@ function applyResponsiveStyles() {
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">Subtotal:</p><p class="fw-bold" <span id="subtotal">₡0</p></div>');
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between px-x"><p class="fw-bold">IVA (13%):</p><p class="fw-bold"><span id="iva">₡0</p></div>');
         container.insertAdjacentHTML('beforeend', '<div class="d-flex justify-content-between p-2 mb-2 bg-primarycarrito"><h5 class="fw-bold mb-0" style="color:white">Total:</h5><h5 class="fw-bold mb-0" style="color:white" <span id="total">₡0</h5> </div>');
-    
+
         //Recargar el subtotal y el total
         updateTotals(false);
     }
