@@ -75,7 +75,7 @@ function displayCart() {
         productHTML = `
         <div class="d-flex align-items-center mb-5">
             <div class="flex-shrink-0">
-                <img src="${item.imagen}" class="img-fluid" style="width: 150px; border-radius: 15px;" alt="${item.nombre}">
+                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style="width: 150px; border-radius: 15px;" alt="${item.nombre}">
             </div>
             <div class="flex-grow-1 ms-3">
                 <h5 class="text-primarycarrito">${item.nombre}</h5>
@@ -111,6 +111,7 @@ function displayCart() {
 
     //Recargar el subtotal y el total
     updateTotals(false);
+    applyResponsiveStyles();
 
 };
 
@@ -491,6 +492,22 @@ function generatePDF(envioDomicilio) {
     }
     doc.save('factura_compra.pdf');
 }
+
+function applyResponsiveStyles() {
+    const myElement = document.getElementById('imgProducto');
+    const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
+
+    if (isSmallScreen) {
+      myElement.style.backgroundColor = 'red'; // Change the background color
+      myElement.style.width = '120px';        // Adjust width
+    //   myElement.style.height = '150px';       // Adjust height
+    // } else {
+    //   myElement.style.backgroundColor = 'blue'; // Revert to default
+    //   myElement.style.width = '200px';
+    //   myElement.style.height = '200px';
+    // }
+    }
+  }
 
 //Evento de carga inicial
 
