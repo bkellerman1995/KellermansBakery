@@ -12,7 +12,7 @@ function displayCart() {
 
     // Carrito de compras almacenado en localStorage
     const products = JSON.parse(localStorage.getItem('cart')) || [];
-
+  
     //Borrar el contenido de los productos (por defecto)
     container.innerHTML = '<h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Mi pedido</h3><hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>';
 
@@ -20,7 +20,6 @@ function displayCart() {
 
     container = document.querySelector('.col-lg-6.px-5.py-4');
 
-    applyResponsiveStyles();
 
     // Chequear si hay productos
     if (products.length === 0) {
@@ -502,10 +501,10 @@ function applyResponsiveStyles() {
     container.innerHTML = '<h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Mi pedido</h3><hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>';
     productHTML = '';
     container = document.querySelector('.col-lg-6.px-5.py-4');
-    const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
+    // const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
     const isSmallScreen2 = window.matchMedia('(max-width: 480px)').matches;
 
-    if (isSmallScreen) {
+    if (isSmallScreen2) {
     // if (isSmallScreen || isSmallScreen2) {
 
 
@@ -552,9 +551,13 @@ function applyResponsiveStyles() {
             container.insertAdjacentHTML('beforeend', productHTML);
         })
     }
+    else {
+        displayCart();
+    }
 }
 
 
 //Evento de carga inicial
 
+window.addEventListener('resize', applyResponsiveStyles);
 document.addEventListener('DOMContentLoaded', displayCart);
