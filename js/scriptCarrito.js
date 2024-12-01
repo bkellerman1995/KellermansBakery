@@ -20,6 +20,8 @@ function displayCart() {
 
     container = document.querySelector('.col-lg-6.px-5.py-4');
 
+    applyResponsiveStyles();
+
     // Chequear si hay productos
     if (products.length === 0) {
 
@@ -111,7 +113,6 @@ function displayCart() {
 
     //Recargar el subtotal y el total
     updateTotals(false);
-    applyResponsiveStyles();
 
 };
 
@@ -437,7 +438,7 @@ function generatePDF(envioDomicilio) {
     // Detalles de los productos
     products.forEach(item => {
         subTotalProducto = item.precio * item.cantidad;
-        doc.rect(14, y, tableWidth, rowHeight); // Bordes de la fila
+        doc.rect(14, y, tableWidth, rowHeight); // Bordes de la filamb-
         doc.text(item.nombre, 15, y + 7);
         doc.text(`CRC ${item.precio.toFixed(2)}`, 80, y + 7);
         doc.text(item.cantidad.toString(), 120, y + 7);
@@ -494,19 +495,65 @@ function generatePDF(envioDomicilio) {
 }
 
 function applyResponsiveStyles() {
-    const myElement = document.getElementById('imgProducto');
+    // Carrito de compras almacenado en localStorage
+    const products = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    //Borrar el contenido de los productos (por defecto)
+    container.innerHTML = '<h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Mi pedido</h3><hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>';
+    productHTML = '';
+    container = document.querySelector('.col-lg-6.px-5.py-4');
     const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
+    const isSmallScreen2 = window.matchMedia('(max-width: 480px)').matches;
 
     if (isSmallScreen) {
-      myElement.style.width = '50px';        // Adjust width
-      myElement.style.height = '50px';       // Adjust height
-    // } else {
-    //   myElement.style.backgroundColor = 'blue'; // Revert to default
-    //   myElement.style.width = '200px';
-    //   myElement.style.height = '200px';
-    // }
+    // if (isSmallScreen || isSmallScreen2) {
+
+
+        // Iterar cada producto y crear el div
+        products.forEach(item => {
+
+            productHTML = `
+        <h5 class="text-primarycarrito" style="text-align:center">${item.nombre}</h5>
+        <div class="d-flex align-items-center mb-2">
+            <div class="flex-shrink-0">
+                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style="width: 150px; border-radius: 15px; margin-left:50%" alt="${item.nombre}">
+            </div>
+            
+
+        </div>
+                            <p class="fw-bold mb-0 me-5 pe-3" style="margin-left:38%"> &#8353 ${item.subtotal}</p>
+                            <br>
+                    <div class="flex-grow-1 ms-3" style="text-align:center">
+                <div class="d-flex align-items-center">
+
+                    <div class="def-number-input number-input safari_only" style="position:absolute;margin-left: 12%">
+                        <button data-mdb-button-init
+                            onclick="updateQuantity('${item.id}', -1)"
+                            class="minus"></button>
+                        <input class="quantity fw-bold bg-body-tertiary text-body" min="0" name="quantity" 
+                        value="${item.cantidad}" type="number" readonly>
+                        <button data-mdb-button-init
+                            onclick="updateQuantity('${item.id}', 1)"
+                            class="plus"></button>
+     
+                    </div>
+                    
+
+                </div>
+            </div>
+            <br>
+                                    <button id = "eliminar" onclick="deleteProduct('${item.id}')" style="margin-left:41%">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" style ="margin-left:15%; vertical-align: text-top" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                        </svg></button>
+                        <hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>
+    `;
+            container.insertAdjacentHTML('beforeend', productHTML);
+        })
     }
-  }
+}
+
 
 //Evento de carga inicial
 
