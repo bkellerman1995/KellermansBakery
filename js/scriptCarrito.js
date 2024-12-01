@@ -499,8 +499,8 @@ function applyResponsiveStyles() {
 
     if (isSmallScreen) {
       myElement.style.backgroundColor = 'red'; // Change the background color
-      myElement.style.width = '50px';        // Adjust width
-    //   myElement.style.height = '150px';       // Adjust height
+      myElement.style.width = '25%';        // Adjust width
+      myElement.style.height = '25%';       // Adjust height
     // } else {
     //   myElement.style.backgroundColor = 'blue'; // Revert to default
     //   myElement.style.width = '200px';
