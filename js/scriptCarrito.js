@@ -501,11 +501,13 @@ function applyResponsiveStyles() {
     container.innerHTML = '<h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Mi pedido</h3><hr class="mb-4" style="height: 2px; background-color: #8B4513; opacity: 1;"/hr>';
     productHTML = '';
     container = document.querySelector('.col-lg-6.px-5.py-4');
+    let screen = window.innerWidth;
+    const screen360 = 360;
+    const screen480 = 480;
     // const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
-    const isSmallScreen2 = window.matchMedia('(max-width: 480px)').matches;
+    // const isSmallScreen2 = window.matchMedia('(max-width: 480px)').matches;
 
-    if (isSmallScreen2) {
-    // if (isSmallScreen || isSmallScreen2) {
+    if (screen >=screen360 || screen <= screen480) {
 
 
         // Iterar cada producto y crear el div
@@ -515,7 +517,7 @@ function applyResponsiveStyles() {
         <h5 class="text-primarycarrito" style="text-align:center">${item.nombre}</h5>
         <div class="d-flex align-items-center mb-2">
             <div class="flex-shrink-0">
-                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style="width: 150px; border-radius: 15px; position:relative" alt="${item.nombre}">
+                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style=" width: 150px;border-radius: 15px; margin-left:50%" alt="${item.nombre}">
             </div>
             
 
