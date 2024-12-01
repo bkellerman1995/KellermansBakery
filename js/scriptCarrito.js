@@ -515,7 +515,7 @@ function applyResponsiveStyles() {
         <h5 class="text-primarycarrito" style="text-align:center">${item.nombre}</h5>
         <div class="d-flex align-items-center mb-2">
             <div class="flex-shrink-0">
-                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style="width: 150px; border-radius: 15px; margin-left:50%" alt="${item.nombre}">
+                <img src="${item.imagen}" id ="imgProducto" class="img-fluid" style="width: 150px; border-radius: 15px; position:relative" alt="${item.nombre}">
             </div>
             
 
