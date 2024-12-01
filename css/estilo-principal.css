@@ -695,6 +695,11 @@ background-color:#f5f5dc; ;
 .cotenedoracercadeboostrap{
     background-color: #f5f5dc; 
 }
+.center-image {
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* Responsive: ajustar tamaño del texto en dispositivos más pequeños */
 @media (min-width: 768px) {
