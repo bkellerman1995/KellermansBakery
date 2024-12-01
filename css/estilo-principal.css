@@ -708,3 +708,9 @@ background-color:#f5f5dc; ;
         display: none;
     }
 }
+
+@media (max-width: 360px) {
+    .navbar-expand-lg .navbar-toggler {
+        margin-left: auto;
+    }
+}
