@@ -498,9 +498,8 @@ function applyResponsiveStyles() {
     const isSmallScreen = window.matchMedia('(max-width: 360px)').matches;
 
     if (isSmallScreen) {
-      myElement.style.backgroundColor = 'red'; // Change the background color
-      myElement.style.width = '120px';        // Adjust width
-    //   myElement.style.height = '150px';       // Adjust height
+      myElement.style.width = '50px';        // Adjust width
+      myElement.style.height = '50px';       // Adjust height
     // } else {
     //   myElement.style.backgroundColor = 'blue'; // Revert to default
     //   myElement.style.width = '200px';
