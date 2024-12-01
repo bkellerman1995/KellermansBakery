@@ -656,19 +656,36 @@ background-color:#f5f5dc; ;
     background-color: #f5f5dc;
 }
 
-.CardContacto{
-    background-color: #f5f5dc;
-    height: 250px; /* Altura fija */
+
+
+.CardContacto {
+    width: 100%;
+    height: 300px; /* Altura uniforme para todos los cards */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar verticalmente */
-    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
+    background-color: #f9f9f9; /* Color de fondo */
+    border: 1px solid #ddd; /* Bordes */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor diseño */
+  }
+  
+  .CardContacto img {
+    margin: 10px 0; /* Espaciado alrededor de las imágenes */
+  }
+  
+  .CardContacto p {
+    margin: 0;
+    font-size: 1rem; /* Ajusta tamaño del texto */
+  }
+  
+  .g-4 > .col-md-4 {
+    display: flex;
+    justify-content: center; /* Alinea los cards horizontalmente */
+  }
+  
     
 .btn-contacto-Enviar{
 
